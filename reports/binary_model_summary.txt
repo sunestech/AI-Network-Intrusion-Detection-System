@@ -1,0 +1,44 @@
+AI-BASED NETWORK INTRUSION DETECTION SYSTEM
+BINARY BASELINE MODEL SUMMARY
+============================================================================
+
+Modeling sample rows: 400,000
+Training rows: 256,000
+Validation rows: 64,000
+Final test rows: 80,000
+Predictive features: 77
+
+Validation-selected model:
+  HistGradientBoosting
+  Selection metric: attack-class F2 score
+
+Untouched final test performance:
+  Accuracy:              0.998663
+  Balanced accuracy:     0.998880
+  Attack precision:      0.994017
+  Attack recall:         0.999240
+  Attack F1-score:       0.996622
+  Attack F2-score:       0.998191
+  Specificity:           0.998520
+  False-positive rate:   0.001480
+  False-negative rate:   0.000760
+  ROC-AUC:               0.999958
+  PR-AUC:                0.999815
+  Matthews correlation:  0.995793
+
+Final test confusion matrix:
+  True negatives:  64,111
+  False positives: 95
+  False negatives: 12
+  True positives:  15,782
+
+Saved model: C:\Users\esumi\AI-NIDS-Project\models\binary\best_binary_nids_pipeline.joblib
+
+Important methodological notes:
+  - The imputer was fitted inside each pipeline using training data only.
+  - The final test split was not used to choose the model.
+  - This is a random, stratified flow-level baseline.
+  - A later scenario/day-aware evaluation is still required to test
+    generalization under stronger leakage controls.
+
+Binary baseline training completed successfully.

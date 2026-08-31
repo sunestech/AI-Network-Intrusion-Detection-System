@@ -1,0 +1,42 @@
+[
+  {
+    "scenario": "benign_baseline",
+    "ground_truth": "BENIGN",
+    "input_file": "C:\\Users\\esumi\\AI-NIDS-Project\\data\\live_lab\\raw\\benign_baseline_raw.csv",
+    "input_sha256": "c63442e9201814ea3256b3bd8fc276e1d15d32e8c13ba9118421a312f83427c0",
+    "raw_rows": 5,
+    "raw_columns": 82,
+    "model_rows": 5,
+    "model_features": 77,
+    "exact_feature_order_match": true,
+    "time_features_scaled": 23,
+    "time_scale_factor": 1000000,
+    "numeric_coercion_failures": 0,
+    "missing_model_cells": 0,
+    "rows_with_missing_model_values": 0,
+    "model_output": "C:\\Users\\esumi\\AI-NIDS-Project\\data\\live_lab\\model_ready\\benign_baseline_model77.csv",
+    "model_output_sha256": "102f739f7914ee637d7d49979e32f6f6cd26789c89792025f1cd328fa8668478",
+    "dashboard_output": "C:\\Users\\esumi\\AI-NIDS-Project\\data\\live_lab\\model_ready\\benign_baseline_dashboard.csv",
+    "dashboard_output_sha256": "f957abd4bfc29f3734ffdfdc55c0712619ae3a1d8ddd60a7f97805c01e38039d"
+  },
+  {
+    "scenario": "portscan_rate_limited",
+    "ground_truth": "PORT SCAN",
+    "input_file": "C:\\Users\\esumi\\AI-NIDS-Project\\data\\live_lab\\raw\\portscan_rate_limited_raw.csv",
+    "input_sha256": "b00d8cc51f7bdc9b80644d8eaece25739432981ba71ba2c21b970596f4e00043",
+    "raw_rows": 502,
+    "raw_columns": 82,
+    "model_rows": 502,
+    "model_features": 77,
+    "exact_feature_order_match": true,
+    "time_features_scaled": 23,
+    "time_scale_factor": 1000000,
+    "numeric_coercion_failures": 0,
+    "missing_model_cells": 0,
+    "rows_with_missing_model_values": 0,
+    "model_output": "C:\\Users\\esumi\\AI-NIDS-Project\\data\\live_lab\\model_ready\\portscan_rate_limited_model77.csv",
+    "model_output_sha256": "13ad6bfa75390953086dcd7e268b5e7d1fd4aeadee4befdad47a4a4d9b167d95",
+    "dashboard_output": "C:\\Users\\esumi\\AI-NIDS-Project\\data\\live_lab\\model_ready\\portscan_rate_limited_dashboard.csv",
+    "dashboard_output_sha256": "726d50401571e4f183af0e0cbb65c1053e9754ab2a2a377a70088e4609db692f"
+  }
+]

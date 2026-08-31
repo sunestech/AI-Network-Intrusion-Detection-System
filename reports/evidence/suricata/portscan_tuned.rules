@@ -1,0 +1,1 @@
+alert tcp 192.168.244.10 any -> 192.168.244.20 any (msg:"NIDS LAB Rate-Limited TCP SYN Scan"; flags:S; flow:stateless; threshold: type threshold, track by_src, count 20, seconds 10; sid:1000002; rev:1;)

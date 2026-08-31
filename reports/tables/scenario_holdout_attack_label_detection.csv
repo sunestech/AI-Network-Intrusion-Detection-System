@@ -1,0 +1,23 @@
+holdout_scenario,label,actual_class,rows,predicted_attack_rows,attack_prediction_rate,detection_rate_if_attack,false_positive_rate_if_benign
+friday-workinghours-afternoon-ddos,BENIGN,BENIGN,97718,269,0.0027528193372766533,,0.0027528193372766533
+friday-workinghours-afternoon-ddos,DDoS,ATTACK,128027,80627,0.6297655963195263,0.6297655963195263,
+friday-workinghours-afternoon-portscan,BENIGN,BENIGN,127537,671,0.0052612183131169775,,0.0052612183131169775
+friday-workinghours-afternoon-portscan,PortScan,ATTACK,158930,566,0.0035613163027748067,0.0035613163027748067,
+friday-workinghours-morning,BENIGN,BENIGN,189067,103,0.0005447804217552508,,0.0005447804217552508
+friday-workinghours-morning,Bot,ATTACK,1966,0,0.0,0.0,
+monday-workinghours,BENIGN,BENIGN,529918,518,0.0009775097279201687,,0.0009775097279201687
+thursday-workinghours-afternoon-infilteration,BENIGN,BENIGN,288566,33888,0.11743587255601838,,0.11743587255601838
+thursday-workinghours-afternoon-infilteration,Infiltration,ATTACK,36,0,0.0,0.0,
+thursday-workinghours-morning-webattacks,BENIGN,BENIGN,168186,154,0.0009156529080898529,,0.0009156529080898529
+thursday-workinghours-morning-webattacks,Web Attack - Brute Force,ATTACK,1507,1212,0.8042468480424685,0.8042468480424685,
+thursday-workinghours-morning-webattacks,Web Attack - SQL Injection,ATTACK,21,9,0.42857142857142855,0.42857142857142855,
+thursday-workinghours-morning-webattacks,Web Attack - XSS,ATTACK,652,593,0.9095092024539877,0.9095092024539877,
+tuesday-workinghours,BENIGN,BENIGN,432074,1394,0.0032262991987483626,,0.0032262991987483626
+tuesday-workinghours,FTP-Patator,ATTACK,7938,20,0.0025195263290501385,0.0025195263290501385,
+tuesday-workinghours,SSH-Patator,ATTACK,5897,26,0.0044090215363744275,0.0044090215363744275,
+wednesday-workinghours,BENIGN,BENIGN,440031,119,0.00027043549204487866,,0.00027043549204487866
+wednesday-workinghours,DoS GoldenEye,ATTACK,10293,0,0.0,0.0,
+wednesday-workinghours,DoS Hulk,ATTACK,231073,2646,0.011450926763403773,0.011450926763403773,
+wednesday-workinghours,DoS Slowhttptest,ATTACK,5499,283,0.051463902527732315,0.051463902527732315,
+wednesday-workinghours,DoS slowloris,ATTACK,5796,155,0.026742581090407176,0.026742581090407176,
+wednesday-workinghours,Heartbleed,ATTACK,11,0,0.0,0.0,

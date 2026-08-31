@@ -1,0 +1,53 @@
+split,Scenario,Label,AttackFamily,BinaryLabel,rows
+train,friday-workinghours-afternoon-ddos,BENIGN,BENIGN,0,8278
+train,friday-workinghours-afternoon-ddos,DDoS,DDoS,1,4533
+train,friday-workinghours-afternoon-portscan,BENIGN,BENIGN,0,10849
+train,friday-workinghours-afternoon-portscan,PortScan,Port Scan,1,13440
+train,friday-workinghours-morning,BENIGN,BENIGN,0,16042
+train,friday-workinghours-morning,Bot,Bot,1,156
+train,monday-workinghours,BENIGN,BENIGN,0,56316
+train,thursday-workinghours-afternoon-infilteration,BENIGN,BENIGN,0,27146
+train,thursday-workinghours-afternoon-infilteration,Infiltration,Infiltration,1,5
+train,thursday-workinghours-morning-webattacks,BENIGN,BENIGN,0,14261
+train,thursday-workinghours-morning-webattacks,Web Attack - Brute Force,Web Attack,1,154
+train,thursday-workinghours-morning-webattacks,Web Attack - XSS,Web Attack,1,69
+train,tuesday-workinghours,BENIGN,BENIGN,0,38704
+train,tuesday-workinghours,FTP-Patator,Brute Force,1,919
+train,tuesday-workinghours,SSH-Patator,Brute Force,1,241
+train,wednesday-workinghours,BENIGN,BENIGN,0,39375
+train,wednesday-workinghours,DoS GoldenEye,DoS,1,854
+train,wednesday-workinghours,DoS Hulk,DoS,1,6307
+train,wednesday-workinghours,DoS Slowhttptest,DoS,1,802
+train,wednesday-workinghours,DoS slowloris,DoS,1,396
+train,wednesday-workinghours,Heartbleed,Exploit,1,2
+validation,friday-workinghours-afternoon-ddos,BENIGN,BENIGN,0,2759
+validation,friday-workinghours-afternoon-ddos,DDoS,DDoS,1,13570
+validation,friday-workinghours-afternoon-portscan,BENIGN,BENIGN,0,3616
+validation,friday-workinghours-afternoon-portscan,PortScan,Port Scan,1,4479
+validation,friday-workinghours-morning,BENIGN,BENIGN,0,5347
+validation,friday-workinghours-morning,Bot,Bot,1,51
+validation,monday-workinghours,BENIGN,BENIGN,0,10004
+validation,thursday-workinghours-afternoon-infilteration,BENIGN,BENIGN,0,9048
+validation,thursday-workinghours-morning-webattacks,BENIGN,BENIGN,0,4753
+validation,thursday-workinghours-morning-webattacks,Web Attack - Brute Force,Web Attack,1,58
+validation,tuesday-workinghours,BENIGN,BENIGN,0,12901
+validation,tuesday-workinghours,FTP-Patator,Brute Force,1,215
+validation,tuesday-workinghours,SSH-Patator,Brute Force,1,191
+validation,wednesday-workinghours,BENIGN,BENIGN,0,13125
+validation,wednesday-workinghours,DoS GoldenEye,DoS,1,571
+validation,wednesday-workinghours,DoS slowloris,DoS,1,463
+test,friday-workinghours-afternoon-ddos,BENIGN,BENIGN,0,2759
+test,friday-workinghours-afternoon-portscan,BENIGN,BENIGN,0,3616
+test,friday-workinghours-afternoon-portscan,PortScan,Port Scan,1,4479
+test,friday-workinghours-morning,BENIGN,BENIGN,0,5347
+test,friday-workinghours-morning,Bot,Bot,1,51
+test,monday-workinghours,BENIGN,BENIGN,0,8560
+test,thursday-workinghours-afternoon-infilteration,BENIGN,BENIGN,0,4582
+test,thursday-workinghours-morning-webattacks,BENIGN,BENIGN,0,4753
+test,thursday-workinghours-morning-webattacks,Web Attack - Brute Force,Web Attack,1,1
+test,thursday-workinghours-morning-webattacks,Web Attack - SQL Injection,Web Attack,1,2
+test,thursday-workinghours-morning-webattacks,Web Attack - XSS,Web Attack,1,23
+test,tuesday-workinghours,BENIGN,BENIGN,0,9419
+test,tuesday-workinghours,SSH-Patator,Brute Force,1,420
+test,wednesday-workinghours,BENIGN,BENIGN,0,9624
+test,wednesday-workinghours,DoS Hulk,DoS,1,26364

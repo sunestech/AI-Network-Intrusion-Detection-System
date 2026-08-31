@@ -1,0 +1,23 @@
+holdout_scenario,label,actual_class,rows,flagged_rows,flag_rate
+friday-workinghours-afternoon-ddos,BENIGN,BENIGN,97718,16297,0.16677582431077181
+friday-workinghours-afternoon-ddos,DDoS,ATTACK,128027,53339,0.4166230560741094
+friday-workinghours-afternoon-portscan,BENIGN,BENIGN,127537,714,0.005598375373421047
+friday-workinghours-afternoon-portscan,PortScan,ATTACK,158930,48,0.0003020197571257786
+friday-workinghours-morning,BENIGN,BENIGN,189067,1499,0.007928406332146806
+friday-workinghours-morning,Bot,ATTACK,1966,34,0.017293997965412006
+monday-workinghours,BENIGN,BENIGN,529918,3315,0.006255684841805714
+thursday-workinghours-afternoon-infilteration,BENIGN,BENIGN,288566,1082,0.003749575487063618
+thursday-workinghours-afternoon-infilteration,Infiltration,ATTACK,36,16,0.4444444444444444
+thursday-workinghours-morning-webattacks,BENIGN,BENIGN,168186,991,0.005892285921539248
+thursday-workinghours-morning-webattacks,Web Attack - Brute Force,ATTACK,1507,0,0.0
+thursday-workinghours-morning-webattacks,Web Attack - SQL Injection,ATTACK,21,0,0.0
+thursday-workinghours-morning-webattacks,Web Attack - XSS,ATTACK,652,0,0.0
+tuesday-workinghours,BENIGN,BENIGN,432074,2534,0.005864736133162375
+tuesday-workinghours,FTP-Patator,ATTACK,7938,0,0.0
+tuesday-workinghours,SSH-Patator,ATTACK,5897,0,0.0
+wednesday-workinghours,BENIGN,BENIGN,440031,6305,0.014328535944058488
+wednesday-workinghours,DoS GoldenEye,ATTACK,10293,1549,0.1504906246963956
+wednesday-workinghours,DoS Hulk,ATTACK,231073,141356,0.6117374163143249
+wednesday-workinghours,DoS Slowhttptest,ATTACK,5499,1301,0.2365884706310238
+wednesday-workinghours,DoS slowloris,ATTACK,5796,1653,0.2851966873706004
+wednesday-workinghours,Heartbleed,ATTACK,11,11,1.0

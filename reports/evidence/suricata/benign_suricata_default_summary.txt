@@ -1,0 +1,9 @@
+Scenario: Benign baseline
+Ground truth: BENIGN
+Activities: 4 ICMP echo requests and 5 HTTP GET requests
+Suricata total alert records: 34
+GPL ICMP PING *NIX: 4
+ET INFO Python SimpleHTTP ServerBanner: 5
+SURICATA TCPv4 invalid checksum: 25
+Interpretation: Alerts were informational or decoder-related; no malicious activity was intentionally generated.
+Recorded UTC: 2026-08-14T17:51:43+00:00

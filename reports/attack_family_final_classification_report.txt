@@ -1,0 +1,11 @@
+                   precision    recall  f1-score   support
+
+Denial of Service   0.999490  0.999959  0.999724     48983
+        Port Scan   0.999900  0.999250  0.999575     20000
+      Brute Force   1.000000  1.000000  1.000000      2866
+       Web Attack   0.980392  0.934579  0.956938       214
+  Other Malicious   1.000000  1.000000  1.000000       402
+
+         accuracy                       0.999572     72465
+        macro avg   0.995956  0.986758  0.991247     72465
+     weighted avg   0.999570  0.999572  0.999569     72465

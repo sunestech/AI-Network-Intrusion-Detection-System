@@ -1,0 +1,13 @@
+Scenario: Controlled rate-limited TCP port scan
+Ground truth: PORT SCAN
+Source: 192.168.244.10
+Destination: 192.168.244.20
+PCAP: /home/sunestech/nids-lab-evidence/formal/pcaps/portscan_rate_limited.pcap
+Default Suricata emitted alerts: 0
+Default Suricata suppressed alerts: 3
+Lab-tuned threshold: 20 SYN packets in 10 seconds by source
+Lab-tuned Suricata emitted alerts: 24
+ML supervised detections: 0 of 502
+ML anomaly detections: 0 of 502
+Ground-truth ATT&CK mapping: T1595 - Active Scanning
+Recorded UTC: 2026-08-14T21:56:44+00:00

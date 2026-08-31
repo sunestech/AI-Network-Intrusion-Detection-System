@@ -1,0 +1,16 @@
+Label,AttackFamily,BinaryLabel,test,train,validation,seen_in_training,represented_in_all_splits
+BENIGN,BENIGN,0,48660,210971,61553,True,True
+Bot,Bot,1,51,156,51,True,True
+DDoS,DDoS,1,0,4533,13570,True,False
+DoS GoldenEye,DoS,1,0,854,571,True,False
+DoS Hulk,DoS,1,26364,6307,0,True,False
+DoS Slowhttptest,DoS,1,0,802,0,True,False
+DoS slowloris,DoS,1,0,396,463,True,False
+FTP-Patator,Brute Force,1,0,919,215,True,False
+Heartbleed,Exploit,1,0,2,0,True,False
+Infiltration,Infiltration,1,0,5,0,True,False
+PortScan,Port Scan,1,4479,13440,4479,True,True
+SSH-Patator,Brute Force,1,420,241,191,True,True
+Web Attack - Brute Force,Web Attack,1,1,154,58,True,True
+Web Attack - SQL Injection,Web Attack,1,2,0,0,False,False
+Web Attack - XSS,Web Attack,1,23,69,0,True,False

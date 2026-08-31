@@ -1,0 +1,30 @@
+split,Scenario,OperationalFamily,Label,rows
+train,friday-workinghours-afternoon-ddos,Denial of Service,DDoS,8282
+train,friday-workinghours-afternoon-portscan,Port Scan,PortScan,60000
+train,friday-workinghours-morning,Other Malicious,Bot,1173
+train,thursday-workinghours-afternoon-infilteration,Other Malicious,Infiltration,27
+train,thursday-workinghours-morning-webattacks,Web Attack,Web Attack - Brute Force,1165
+train,thursday-workinghours-morning-webattacks,Web Attack,Web Attack - XSS,466
+train,tuesday-workinghours,Brute Force,FTP-Patator,6565
+train,tuesday-workinghours,Brute Force,SSH-Patator,1566
+train,wednesday-workinghours,Denial of Service,DoS GoldenEye,2715
+train,wednesday-workinghours,Denial of Service,DoS Hulk,11735
+train,wednesday-workinghours,Denial of Service,DoS Slowhttptest,1437
+train,wednesday-workinghours,Denial of Service,DoS slowloris,1511
+train,wednesday-workinghours,Other Malicious,Heartbleed,9
+validation,friday-workinghours-afternoon-ddos,Denial of Service,DDoS,25337
+validation,friday-workinghours-afternoon-portscan,Port Scan,PortScan,20000
+validation,friday-workinghours-morning,Other Malicious,Bot,399
+validation,thursday-workinghours-afternoon-infilteration,Other Malicious,Infiltration,3
+validation,thursday-workinghours-morning-webattacks,Web Attack,Web Attack - Brute Force,335
+validation,tuesday-workinghours,Brute Force,FTP-Patator,1373
+validation,tuesday-workinghours,Brute Force,SSH-Patator,1465
+test,friday-workinghours-afternoon-portscan,Port Scan,PortScan,20000
+test,friday-workinghours-morning,Other Malicious,Bot,394
+test,thursday-workinghours-afternoon-infilteration,Other Malicious,Infiltration,6
+test,thursday-workinghours-morning-webattacks,Web Attack,Web Attack - Brute Force,7
+test,thursday-workinghours-morning-webattacks,Web Attack,Web Attack - SQL Injection,21
+test,thursday-workinghours-morning-webattacks,Web Attack,Web Attack - XSS,186
+test,tuesday-workinghours,Brute Force,SSH-Patator,2866
+test,wednesday-workinghours,Denial of Service,DoS Hulk,48983
+test,wednesday-workinghours,Other Malicious,Heartbleed,2

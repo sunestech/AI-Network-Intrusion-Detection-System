@@ -1,0 +1,131 @@
+AI NIDS — STEP 3: BINARY BASELINE MODELS
+
+This package creates:
+
+    src\03_train_binary_baselines.py
+
+It does not modify your raw or processed datasets.
+
+PURPOSE
+
+The script compares four binary intrusion-detection candidates:
+
+1. Dummy prior classifier
+2. Scalable logistic regression via SGD
+3. Random Forest
+4. Histogram Gradient Boosting
+
+It uses:
+
+    0 = BENIGN
+    1 = ATTACK
+
+The default experiment draws a deterministic, scenario-proportional sample of
+400,000 processed flows. The split is:
+
+    64% training
+    16% validation
+    20% untouched final testing
+
+The model is selected on validation attack-class F2 score. F2 weights recall
+more heavily than precision because missed attacks are especially costly in a
+NIDS. The selected pipeline is then refitted on training + validation and
+evaluated once on the final test split.
+
+INSTALL
+
+Extract NIDS_Binary_Baselines_Step3.zip into:
+
+    C:\Users\esumi\AI-NIDS-Project
+
+Confirm:
+
+    Test-Path .\src\03_train_binary_baselines.py
+
+Expected:
+
+    True
+
+RECOMMENDED FIRST RUN
+
+    python .\src\03_train_binary_baselines.py
+
+The default uses:
+
+    400,000 sampled flows
+    120 Random Forest trees
+    100 Histogram Gradient Boosting iterations
+    Up to 4 CPU workers
+
+Depending on the computer, this may take roughly 10–45 minutes. Leave the
+terminal open until [COMPLETE] appears.
+
+LOW-MEMORY / FASTER TRIAL
+
+    python .\src\03_train_binary_baselines.py `
+        --sample-size 200000 `
+        --rf-trees 80 `
+        --hgb-iterations 70 `
+        --n-jobs 2
+
+STRONGER LATER RUN
+
+    python .\src\03_train_binary_baselines.py `
+        --sample-size 750000 `
+        --rf-trees 180 `
+        --hgb-iterations 150 `
+        --n-jobs 4
+
+OUTPUTS
+
+Model:
+    models\binary\best_binary_nids_pipeline.joblib
+
+Main reports:
+    reports\binary_model_summary.txt
+    reports\binary_final_test_metrics.json
+    reports\binary_final_classification_report.txt
+
+Tables:
+    reports\tables\binary_validation_model_comparison.csv
+    reports\tables\binary_modeling_sample_distribution.csv
+    reports\tables\binary_final_confusion_matrix.csv
+    reports\tables\binary_random_forest_feature_importance.csv
+
+Predictions:
+    reports\predictions\binary_final_test_predictions.csv
+    reports\predictions\binary_final_test_predictions.parquet
+
+Figures:
+    reports\figures\binary_validation_model_comparison.png
+    reports\figures\binary_validation_roc_curves.png
+    reports\figures\binary_validation_precision_recall_curves.png
+    reports\figures\binary_validation_confusion_matrix_*.png
+    reports\figures\binary_random_forest_feature_importance.png
+    reports\figures\binary_final_test_confusion_matrix.png
+    reports\figures\binary_final_test_roc_curve.png
+    reports\figures\binary_final_test_precision_recall_curve.png
+
+CHECK RESULTS
+
+    Get-Content .\reports\binary_model_summary.txt
+
+    Import-Csv .\reports\tables\binary_validation_model_comparison.csv |
+        Format-Table `
+            model,
+            precision_attack,
+            recall_attack,
+            f2_attack,
+            pr_auc,
+            fit_seconds `
+            -AutoSize
+
+    Start-Process .\reports\figures\binary_final_test_confusion_matrix.png
+
+    Start-Process .\reports\figures\binary_validation_model_comparison.png
+
+IMPORTANT
+
+This is the reproducible random, stratified flow-level baseline. A later
+scenario/day-aware evaluation will test whether the selected model generalizes
+when related traffic sessions are kept out of the random split.

@@ -1,0 +1,3 @@
+"Scenario","GroundTruth","EvaluatedMLFlows","SuricataEmittedAlerts","SuricataResult","MLAttackPredictions","MLBenignPredictions","MLAnomalyFlags","FinalAssessment","MITREGroundTruth"
+"Benign HTTP baseline","BENIGN","5","34","Informational and decoder records","0","5","0","Correct benign security verdict",""
+"Rate-limited TCP port scan","PORT SCAN","502","0","No emitted alert; 3 suppressed","0","502","0","Joint analyst-facing false negative","T1595 - Active Scanning"

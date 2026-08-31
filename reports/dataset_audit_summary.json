@@ -1,0 +1,55 @@
+{
+  "project_root": "C:\\Users\\esumi\\AI-NIDS-Project",
+  "chunk_size": 50000,
+  "collections": {
+    "machine_learning": {
+      "files": 8,
+      "successful_files": 8,
+      "physical_rows": 2830743,
+      "valid_rows": 2830743,
+      "empty_rows": 0,
+      "missing_cells": 1358,
+      "infinite_values": 4376,
+      "total_size_mb": 843.66
+    },
+    "generated_flows": {
+      "files": 8,
+      "successful_files": 8,
+      "physical_rows": 3119345,
+      "valid_rows": 2830743,
+      "empty_rows": 288602,
+      "missing_cells": 1358,
+      "infinite_values": 4376,
+      "total_size_mb": 1147.37
+    }
+  },
+  "machine_learning_binary_distribution": {
+    "BENIGN": 2273097,
+    "ATTACK": 557646,
+    "BENIGN_percentage": 80.30036637024273,
+    "ATTACK_percentage": 19.699633629757276
+  },
+  "machine_learning_distinct_labels": 15,
+  "generated_context_columns_detected": [
+    "Destination IP",
+    "Flow ID",
+    "Protocol",
+    "Source IP",
+    "Source Port",
+    "Timestamp"
+  ],
+  "expected_context_columns": [
+    "Destination IP",
+    "Flow ID",
+    "Protocol",
+    "Source IP",
+    "Source Port",
+    "Timestamp"
+  ],
+  "important_notes": [
+    "The source CSV files were read only; they were not modified.",
+    "Completely empty rows are excluded from valid-row and label counts.",
+    "Generated-flow files should not be treated as an independent test set when they contain the same underlying flows as the machine-learning collection.",
+    "Overall accuracy alone is insufficient because rare attack classes are heavily imbalanced."
+  ]
+}

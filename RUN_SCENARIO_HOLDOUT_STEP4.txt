@@ -1,0 +1,116 @@
+AI NIDS — STEP 4: SCENARIO-HOLDOUT GENERALIZATION
+
+This package creates:
+
+    src\04_scenario_holdout_evaluation.py
+
+PURPOSE
+
+Step 3 used a random, stratified flow-level split. That baseline is valid, but
+related flows from the same traffic scenario can appear in both training and
+testing data.
+
+Step 4 performs a stronger test:
+
+1. Hold out one complete traffic scenario.
+2. Train a fresh clone of the selected Step 3 pipeline using samples from the
+   other seven scenarios only.
+3. Test on every valid row in the held-out scenario.
+4. Repeat for all eight scenarios.
+5. Aggregate the results.
+
+The Step 3 production model is NOT overwritten.
+
+INSTALL
+
+Extract NIDS_Scenario_Holdout_Step4.zip into:
+
+    C:\Users\esumi\AI-NIDS-Project
+
+Confirm:
+
+    Test-Path .\src\04_scenario_holdout_evaluation.py
+
+Expected:
+
+    True
+
+RUN
+
+    python .\src\04_scenario_holdout_evaluation.py
+
+The default creates a reusable 300,000-row sample pool. Each fold excludes the
+held-out scenario from that pool and evaluates the full held-out Parquet file.
+
+This requires eight fresh model fits. Depending on your computer, allow roughly
+20–90 minutes.
+
+FASTER TRIAL
+
+    python .\src\04_scenario_holdout_evaluation.py `
+        --training-pool-size 150000
+
+STRONGER RUN
+
+    python .\src\04_scenario_holdout_evaluation.py `
+        --training-pool-size 500000
+
+OUTPUTS
+
+Main summary:
+    reports\scenario_holdout_summary.txt
+    reports\scenario_holdout_summary.json
+
+Tables:
+    reports\tables\scenario_holdout_metrics.csv
+    reports\tables\scenario_holdout_attack_label_detection.csv
+    reports\tables\scenario_holdout_attack_family_detection.csv
+    reports\tables\scenario_holdout_aggregate_metrics.csv
+
+Figures:
+    reports\figures\scenario_holdout_error_rates.png
+    reports\figures\scenario_holdout_attack_recall.png
+    reports\figures\scenario_holdout_attack_label_detection.png
+    reports\figures\scenario_holdout_aggregate_confusion_matrix.png
+    reports\figures\scenario_holdout_aggregate_roc_curve.png
+    reports\figures\scenario_holdout_aggregate_precision_recall_curve.png
+    reports\figures\scenario_holdout_confusion_matrix_*.png
+
+Error ledgers:
+    reports\predictions\scenario_holdout_errors\*.parquet
+    reports\predictions\scenario_holdout_errors\*_errors_preview.csv
+
+CHECK RESULTS
+
+    Get-Content .\reports\scenario_holdout_summary.txt
+
+    Import-Csv .\reports\tables\scenario_holdout_metrics.csv |
+        Format-Table `
+            holdout_scenario,
+            actual_attack,
+            precision_attack,
+            recall_attack,
+            false_positive_rate,
+            false_negative_rate,
+            errors `
+            -AutoSize
+
+    Import-Csv .\reports\tables\scenario_holdout_attack_label_detection.csv |
+        Where-Object actual_class -eq "ATTACK" |
+        Format-Table `
+            holdout_scenario,
+            label,
+            rows,
+            detection_rate_if_attack `
+            -AutoSize
+
+    Start-Process .\reports\figures\scenario_holdout_aggregate_confusion_matrix.png
+
+    Start-Process .\reports\figures\scenario_holdout_attack_recall.png
+
+INTERPRETATION
+
+It is normal for scenario-holdout performance to be lower than the random-split
+result. A decline means the random baseline benefited from traffic patterns
+shared between training and testing. The scenario-holdout result is the stronger
+evidence of how the detector handles a new traffic campaign or operational day.

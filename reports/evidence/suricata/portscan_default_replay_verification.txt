@@ -1,0 +1,8 @@
+Scenario: Controlled rate-limited TCP port scan
+Ground truth: PORT SCAN
+Source: 192.168.244.10
+Destination: 192.168.244.20
+Unique Suricata flows processed: 502
+Default Suricata emitted alerts: 0
+Interpretation: Suricata processed the traffic successfully but emitted
+no analyst-facing alert events under the tested default ruleset.

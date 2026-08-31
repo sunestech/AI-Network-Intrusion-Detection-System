@@ -1,0 +1,51 @@
+{
+  "model_family_evaluated": "HistGradientBoosting",
+  "feature_count": 77,
+  "decision_threshold": 0.5,
+  "training_pool_size_requested": 300000,
+  "scenarios_evaluated": [
+    "friday-workinghours-afternoon-ddos",
+    "friday-workinghours-afternoon-portscan",
+    "friday-workinghours-morning",
+    "monday-workinghours",
+    "thursday-workinghours-afternoon-infilteration",
+    "thursday-workinghours-morning-webattacks",
+    "tuesday-workinghours",
+    "wednesday-workinghours"
+  ],
+  "evaluation_method": "Eight-fold leave-one-scenario-out evaluation. Each fold trained a fresh clone of the Step 3 selected pipeline on the reusable sample pool after excluding the complete held-out scenario, then tested on every valid row in that scenario.",
+  "aggregate_metrics": {
+    "holdout_scenario": "ALL_SCENARIOS_AGGREGATED",
+    "training_rows": 0,
+    "test_rows": 2830743,
+    "actual_benign": 2273097,
+    "actual_attack": 557646,
+    "fit_seconds": 99.93112399998063,
+    "prediction_seconds": 12.403166400021291,
+    "prediction_throughput_flows_per_second": 228227.44682318709,
+    "accuracy": 0.8203210252573264,
+    "balanced_accuracy": 0.5690684969891687,
+    "precision_attack": 0.6988633136718782,
+    "recall_attack": 0.15446537767687746,
+    "f1_attack": 0.25300962404115734,
+    "f2_attack": 0.1829714631896771,
+    "specificity": 0.98367161630146,
+    "false_positive_rate": 0.016328383698539922,
+    "false_negative_rate": 0.8455346223231226,
+    "roc_auc": 0.9128180568463029,
+    "pr_auc": 0.5819242227482089,
+    "matthews_correlation": 0.26922544348062044,
+    "true_negative": 2235981,
+    "false_positive": 37116,
+    "false_negative": 471509,
+    "true_positive": 86137,
+    "errors": 508625
+  },
+  "experiment_started_utc": "2026-08-05T00:37:25.777409+00:00",
+  "experiment_completed_utc": "2026-08-05T00:39:37.948639+00:00",
+  "limitations": [
+    "Scenario holdout is stronger than a random flow-level split, but all data still originates from the same historical dataset.",
+    "A scenario with no attacks cannot produce attack recall or ROC/PR-AUC by itself; it remains useful for false-positive analysis.",
+    "Very rare attack labels have unstable estimates because they contain only a small number of examples."
+  ]
+}

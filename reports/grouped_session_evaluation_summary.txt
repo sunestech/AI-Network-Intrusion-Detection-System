@@ -1,0 +1,46 @@
+AI-BASED NETWORK INTRUSION DETECTION SYSTEM
+GROUP-AWARE KNOWN-ATTACK EVALUATION SUMMARY
+==============================================================================
+
+Model family: HistGradientBoosting
+Aligned sample rows: 400,000
+Training rows: 238,849
+Validation rows: 81,151
+Test rows: 80,000
+Unique session-like groups: 142,894
+Group time bucket: 15 minutes
+Group overlap across splits: 0
+
+Validation-selected threshold: 0.420000
+Validation FPR constraint: 1.0000%
+
+Untouched grouped test performance:
+  Accuracy:             0.998575
+  Balanced accuracy:    0.998692
+  Attack precision:     0.997134
+  Attack recall:        0.999234
+  Attack F1-score:      0.998183
+  Attack F2-score:      0.998814
+  Specificity:          0.998150
+  False-positive rate:  0.001850
+  False-negative rate:  0.000766
+  ROC-AUC:              0.999985
+  PR-AUC:               0.999974
+
+Confusion matrix:
+  True negatives:  48,570
+  False positives: 90
+  False negatives: 24
+  True positives:  31,316
+
+Label coverage warning:
+  Test labels absent from training: Web Attack - SQL Injection
+
+Interpretation:
+  No session-like GroupID appears in more than one split. Unlike the
+  complete scenario holdout, this design allows known attack families
+  to remain represented while testing new communication/time groups.
+
+Saved grouped model: C:\Users\esumi\AI-NIDS-Project\models\binary\grouped_known_attack_nids_pipeline.joblib
+
+Grouped known-attack evaluation completed successfully.

@@ -1,0 +1,159 @@
+AI NIDS — STEP 7: BENIGN-TRAINED ANOMALY DETECTOR
+
+This package creates:
+
+    src\07_anomaly_novelty_evaluation.py
+
+WHY THIS STEP EXISTS
+
+The supervised models are very strong for known attack patterns:
+
+    Binary detector
+        BENIGN versus ATTACK
+
+    Attack-family classifier
+        Denial of Service
+        Port Scan
+        Brute Force
+        Web Attack
+        Other Malicious
+
+The complete scenario-holdout result showed that a supervised model struggles
+when an attack family is absent from training. Step 7 adds a benign-trained
+Isolation Forest that asks a different question:
+
+    Does this flow look unusual compared with learned normal behavior?
+
+An anomaly flag is not proof of an intrusion. It is a triage signal.
+
+METHODOLOGY
+
+For each of eight folds:
+
+1. Exclude one complete traffic scenario.
+2. Use BENIGN samples from the other seven only.
+3. Fit SimpleImputer + IsolationForest.
+4. Calibrate the threshold on BENIGN validation data only.
+5. Target a 1% validation false-positive rate by default.
+6. Evaluate every valid flow in the completely held-out scenario.
+
+The script also trains a final benign-only artifact across all scenarios for
+the later Streamlit SOC dashboard.
+
+INSTALL
+
+Extract NIDS_Anomaly_Detector_Step7.zip into:
+
+    C:\Users\esumi\AI-NIDS-Project
+
+Confirm:
+
+    Test-Path .\src\07_anomaly_novelty_evaluation.py
+
+Expected:
+
+    True
+
+RUN
+
+    python .\src\07_anomaly_novelty_evaluation.py
+
+DEFAULT SETTINGS
+
+    Benign modeling pool: 240,000 rows
+    Isolation Forest trees: 200
+    Rows per tree: 10,000
+    Threshold target: 1% benign validation FPR
+    Held-out prediction batch size: 50,000
+
+Allow approximately 20–90 minutes depending on the computer.
+
+FASTER TRIAL
+
+    python .\src\07_anomaly_novelty_evaluation.py `
+        --benign-pool-size 120000 `
+        --trees 120 `
+        --max-samples 5000 `
+        --n-jobs 2
+
+STRONGER RUN
+
+    python .\src\07_anomaly_novelty_evaluation.py `
+        --benign-pool-size 400000 `
+        --trees 300 `
+        --max-samples 20000 `
+        --n-jobs 4
+
+OUTPUTS
+
+Saved anomaly model:
+    models\anomaly\benign_isolation_forest_pipeline.joblib
+
+Main summary:
+    reports\anomaly_model_summary.txt
+    reports\anomaly_model_summary.json
+
+Tables:
+    reports\tables\anomaly_scenario_holdout_metrics.csv
+    reports\tables\anomaly_attack_label_detection.csv
+    reports\tables\anomaly_aggregate_metrics.csv
+    reports\tables\novel_scenario_detector_comparison.csv
+
+Alert previews:
+    reports\predictions\anomaly_alert_previews\*.csv
+
+Figures:
+    reports\figures\anomaly_scenario_error_rates.png
+    reports\figures\anomaly_scenario_attack_recall.png
+    reports\figures\anomaly_attack_label_detection.png
+    reports\figures\anomaly_aggregate_confusion_matrix.png
+    reports\figures\anomaly_aggregate_roc_curve.png
+    reports\figures\anomaly_aggregate_precision_recall_curve.png
+    reports\figures\novel_scenario_detector_comparison.png
+    reports\figures\anomaly_confusion_matrix_*.png
+
+CHECK RESULTS
+
+    Get-Content .\reports\anomaly_model_summary.txt
+
+    Import-Csv .\reports\tables\anomaly_scenario_holdout_metrics.csv |
+        Format-Table `
+            holdout_scenario,
+            actual_attack,
+            precision_attack,
+            recall_attack,
+            false_positive_rate,
+            false_negative_rate `
+            -AutoSize
+
+    Import-Csv .\reports\tables\anomaly_attack_label_detection.csv |
+        Where-Object actual_class -eq "ATTACK" |
+        Format-Table `
+            holdout_scenario,
+            label,
+            rows,
+            flag_rate `
+            -AutoSize
+
+    Start-Process .\reports\figures\anomaly_aggregate_confusion_matrix.png
+
+    Start-Process .\reports\figures\novel_scenario_detector_comparison.png
+
+INTERPRETATION
+
+A strong anomaly result would mean unseen attacks often differ from learned
+benign behavior. A high held-out benign false-positive rate would reveal normal
+traffic distribution shift. Both outcomes are valuable and must be reported
+honestly.
+
+NEXT
+
+Step 8 will combine:
+
+    supervised binary risk
+    attack-family classification
+    anomaly status
+    Flow ID / IP / port / protocol / timestamp context
+    MITRE ATT&CK enrichment
+
+inside a Streamlit SOC dashboard.

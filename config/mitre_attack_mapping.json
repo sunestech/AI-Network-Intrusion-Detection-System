@@ -1,0 +1,66 @@
+{
+  "Denial of Service": {
+    "tactic": "Impact",
+    "techniques": [
+      {
+        "id": "T1498",
+        "name": "Network Denial of Service",
+        "url": "https://attack.mitre.org/techniques/T1498/"
+      },
+      {
+        "id": "T1499",
+        "name": "Endpoint Denial of Service",
+        "url": "https://attack.mitre.org/techniques/T1499/"
+      }
+    ],
+    "note": "The broad project family contains DDoS and several DoS variants. Packet, service, and endpoint evidence is required to choose the most specific technique or sub-technique."
+  },
+  "Port Scan": {
+    "tactic": "Discovery",
+    "techniques": [
+      {
+        "id": "T1046",
+        "name": "Network Service Discovery",
+        "url": "https://attack.mitre.org/techniques/T1046/"
+      }
+    ],
+    "note": "Operational enrichment for service/port discovery behavior. External active scanning may require a different ATT&CK context."
+  },
+  "Brute Force": {
+    "tactic": "Credential Access",
+    "techniques": [
+      {
+        "id": "T1110",
+        "name": "Brute Force",
+        "url": "https://attack.mitre.org/techniques/T1110/"
+      }
+    ],
+    "note": "The dataset family combines FTP-Patator and SSH-Patator. The exact T1110 sub-technique requires authentication evidence."
+  },
+  "Web Attack": {
+    "tactic": "Initial Access",
+    "techniques": [
+      {
+        "id": "T1190",
+        "name": "Exploit Public-Facing Application",
+        "url": "https://attack.mitre.org/techniques/T1190/"
+      }
+    ],
+    "note": "Family-level enrichment for SQL injection, XSS, and web brute-force records. Not every web request proves successful exploitation."
+  },
+  "Other Malicious": {
+    "tactic": "Analyst Review",
+    "techniques": [],
+    "note": "This combined family contains Bot, Infiltration, and Heartbleed. There is no defensible single ATT&CK technique without the original label and supporting network/host evidence."
+  },
+  "Anomalous / Unmapped": {
+    "tactic": "Unmapped",
+    "techniques": [],
+    "note": "An anomaly is a behavioral deviation, not an ATT&CK technique. Analyst investigation is required before mapping."
+  },
+  "BENIGN": {
+    "tactic": "",
+    "techniques": [],
+    "note": "No ATT&CK enrichment is applied to non-alerting traffic."
+  }
+}

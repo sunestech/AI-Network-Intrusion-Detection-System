@@ -1,0 +1,43 @@
+AI-BASED NETWORK INTRUSION DETECTION SYSTEM
+SECOND-STAGE ATTACK-FAMILY CLASSIFIER SUMMARY
+================================================================================
+
+Two-stage architecture:
+  Stage 1: Binary detector -> BENIGN or ATTACK
+  Stage 2: If ATTACK, classify the operational attack family
+
+Selected family model: Random Forest
+Predictive features: 77
+Source attack flows: 557,646
+Modeling rows after family caps: 218,028
+Training rows: 96,651
+Validation rows: 48,912
+Test rows: 72,465
+Unique session-like groups: 3,814
+Group overlap across splits: 0
+
+Operational families:
+  Denial of Service
+  Port Scan
+  Brute Force
+  Web Attack
+  Other Malicious
+
+Untouched grouped test performance:
+  Accuracy:            0.999572
+  Balanced accuracy:   0.986758
+  Macro precision:     0.995956
+  Macro recall:        0.986758
+  Macro F1-score:      0.991247
+  Macro F2-score:      0.988528
+  Weighted F1-score:   0.999569
+  Matthews correlation:0.999081
+
+Important interpretation:
+  This model classifies broad operational families after the binary
+  detector has already identified a flow as malicious. It does not
+  prove exact malware attribution or zero-day recognition.
+
+Saved model: C:\Users\esumi\AI-NIDS-Project\models\attack_family\best_attack_family_pipeline.joblib
+
+Attack-family training completed successfully.

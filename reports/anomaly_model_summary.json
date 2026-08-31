@@ -1,0 +1,38 @@
+{
+  "model": "IsolationForest",
+  "feature_count": 77,
+  "benign_pool_size_requested": 240000,
+  "target_validation_false_positive_rate": 0.01,
+  "scenario_holdout_metrics": {
+    "test_rows": 2830743,
+    "actual_benign": 2273097,
+    "actual_attack": 557646,
+    "accuracy": 0.8618468720049824,
+    "balanced_accuracy": 0.6715029045199887,
+    "precision_attack": 0.858918998121046,
+    "recall_attack": 0.3574077461328513,
+    "f1_attack": 0.5047727589307196,
+    "f2_attack": 0.40466322968795937,
+    "specificity": 0.9855980629071263,
+    "false_positive_rate": 0.014401937092873731,
+    "false_negative_rate": 0.6425922538671487,
+    "roc_auc": 0.7770636618978795,
+    "pr_auc": 0.5478806509287508,
+    "matthews_correlation": 0.4973093149683567,
+    "true_negative": 2240360,
+    "false_positive": 32737,
+    "false_negative": 358339,
+    "true_positive": 199307,
+    "errors": 391076
+  },
+  "final_artifact_threshold": 0.5244398115658198,
+  "final_artifact_calibration_false_positive_rate": 0.010020207070391434,
+  "experiment_started_utc": "2026-08-07T14:28:27.455475+00:00",
+  "experiment_completed_utc": "2026-08-07T14:30:16.001565+00:00",
+  "interpretation": "The anomaly detector learns benign behavior only. Scenario-holdout attack recall measures whether unseen attack flows look unusual, while held-out benign FPR measures sensitivity to benign distribution shift.",
+  "limitations": [
+    "Isolation Forest detects unusual feature combinations; it does not identify the cause or prove that a flow is malicious.",
+    "A low calibration FPR can become much higher on a held-out network scenario if normal traffic changes.",
+    "All data still originates from one historical benchmark. External and current traffic validation remains necessary."
+  ]
+}

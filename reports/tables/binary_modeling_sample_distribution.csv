@@ -1,0 +1,16 @@
+Scenario,BinaryLabel,rows,class_name
+friday-workinghours-afternoon-ddos,0,13802,BENIGN
+friday-workinghours-afternoon-ddos,1,18097,ATTACK
+friday-workinghours-afternoon-portscan,0,18023,BENIGN
+friday-workinghours-afternoon-portscan,1,22456,ATTACK
+friday-workinghours-morning,0,26691,BENIGN
+friday-workinghours-morning,1,303,ATTACK
+monday-workinghours,0,74880,BENIGN
+thursday-workinghours-afternoon-infilteration,0,40775,BENIGN
+thursday-workinghours-afternoon-infilteration,1,6,ATTACK
+thursday-workinghours-morning-webattacks,0,23747,BENIGN
+thursday-workinghours-morning-webattacks,1,327,ATTACK
+tuesday-workinghours,0,61096,BENIGN
+tuesday-workinghours,1,1914,ATTACK
+wednesday-workinghours,0,62014,BENIGN
+wednesday-workinghours,1,35869,ATTACK

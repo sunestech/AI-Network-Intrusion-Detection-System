@@ -1,0 +1,78 @@
+position,feature,dtype
+1,Destination Port,float32
+2,Flow Duration,float32
+3,Total Fwd Packets,float32
+4,Total Backward Packets,float32
+5,Total Length of Fwd Packets,float32
+6,Total Length of Bwd Packets,float32
+7,Fwd Packet Length Max,float32
+8,Fwd Packet Length Min,float32
+9,Fwd Packet Length Mean,float32
+10,Fwd Packet Length Std,float32
+11,Bwd Packet Length Max,float32
+12,Bwd Packet Length Min,float32
+13,Bwd Packet Length Mean,float32
+14,Bwd Packet Length Std,float32
+15,Flow Bytes/s,float32
+16,Flow Packets/s,float32
+17,Flow IAT Mean,float32
+18,Flow IAT Std,float32
+19,Flow IAT Max,float32
+20,Flow IAT Min,float32
+21,Fwd IAT Total,float32
+22,Fwd IAT Mean,float32
+23,Fwd IAT Std,float32
+24,Fwd IAT Max,float32
+25,Fwd IAT Min,float32
+26,Bwd IAT Total,float32
+27,Bwd IAT Mean,float32
+28,Bwd IAT Std,float32
+29,Bwd IAT Max,float32
+30,Bwd IAT Min,float32
+31,Fwd PSH Flags,float32
+32,Bwd PSH Flags,float32
+33,Fwd URG Flags,float32
+34,Bwd URG Flags,float32
+35,Fwd Header Length,float32
+36,Bwd Header Length,float32
+37,Fwd Packets/s,float32
+38,Bwd Packets/s,float32
+39,Min Packet Length,float32
+40,Max Packet Length,float32
+41,Packet Length Mean,float32
+42,Packet Length Std,float32
+43,Packet Length Variance,float32
+44,FIN Flag Count,float32
+45,SYN Flag Count,float32
+46,RST Flag Count,float32
+47,PSH Flag Count,float32
+48,ACK Flag Count,float32
+49,URG Flag Count,float32
+50,CWE Flag Count,float32
+51,ECE Flag Count,float32
+52,Down/Up Ratio,float32
+53,Average Packet Size,float32
+54,Avg Fwd Segment Size,float32
+55,Avg Bwd Segment Size,float32
+56,Fwd Avg Bytes/Bulk,float32
+57,Fwd Avg Packets/Bulk,float32
+58,Fwd Avg Bulk Rate,float32
+59,Bwd Avg Bytes/Bulk,float32
+60,Bwd Avg Packets/Bulk,float32
+61,Bwd Avg Bulk Rate,float32
+62,Subflow Fwd Packets,float32
+63,Subflow Fwd Bytes,float32
+64,Subflow Bwd Packets,float32
+65,Subflow Bwd Bytes,float32
+66,Init_Win_bytes_forward,float32
+67,Init_Win_bytes_backward,float32
+68,act_data_pkt_fwd,float32
+69,min_seg_size_forward,float32
+70,Active Mean,float32
+71,Active Std,float32
+72,Active Max,float32
+73,Active Min,float32
+74,Idle Mean,float32
+75,Idle Std,float32
+76,Idle Max,float32
+77,Idle Min,float32

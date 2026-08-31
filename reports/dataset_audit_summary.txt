@@ -1,0 +1,38 @@
+AI-BASED NETWORK INTRUSION DETECTION SYSTEM
+DATASET AUDIT SUMMARY
+========================================================================
+
+Collection: machine_learning
+  Files: 8
+  Valid rows: 2,830,743
+  Empty rows: 0
+  Missing cells: 1,358
+  Infinite values: 4,376
+  Total size: 843.66 MB
+
+Collection: generated_flows
+  Files: 8
+  Valid rows: 2,830,743
+  Empty rows: 288,602
+  Missing cells: 1,358
+  Infinite values: 4,376
+  Total size: 1,147.37 MB
+
+Machine-learning binary distribution:
+  BENIGN: 2,273,097
+  ATTACK: 557,646
+
+Generated-flow context columns detected:
+  Destination IP, Flow ID, Protocol, Source IP, Source Port, Timestamp
+
+Reports created:
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\dataset_inventory.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\label_counts_by_file.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\machine_learning_label_distribution.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\generated_flow_label_distribution.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\schema_presence.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\collection_pair_comparison.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\figures\multiclass_label_distribution.png
+  C:\Users\esumi\AI-NIDS-Project\reports\figures\binary_label_distribution.png
+
+Audit completed successfully.

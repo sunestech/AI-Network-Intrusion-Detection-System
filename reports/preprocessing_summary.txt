@@ -1,0 +1,38 @@
+AI-BASED NETWORK INTRUSION DETECTION SYSTEM
+PREPROCESSING SUMMARY
+========================================================================
+
+Machine-learning files processed: 8
+Machine-learning valid rows: 2,830,743
+Generated-flow files processed: 8
+Generated context valid rows: 2,830,743
+Generated empty rows dropped: 288,602
+
+Predictive features after duplicate removal: 77
+Duplicate feature columns removed: Fwd Header Length.1
+Infinity values replaced with NaN: 4,376
+Non-numeric feature values coerced to NaN: 0
+Missing feature values retained for train-only imputation: 5,734
+
+Targets created:
+  Label: normalized 15-class target
+  BinaryLabel: 0=BENIGN, 1=ATTACK
+  AttackFamily: operational family target
+
+Machine-learning/generated-flow alignment:
+  All row counts and shared-column hashes match: True
+
+Important:
+  The raw CSV files were not modified.
+  Missing values remain missing until the training pipeline fits an
+  imputer using training data only.
+
+Output locations:
+  C:\Users\esumi\AI-NIDS-Project\data\processed\machine_learning
+  C:\Users\esumi\AI-NIDS-Project\data\processed\generated_context
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\preprocessing_file_summary.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\feature_manifest.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\preprocessing_alignment_check.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\preprocessing_summary.json
+
+Preprocessing completed successfully.

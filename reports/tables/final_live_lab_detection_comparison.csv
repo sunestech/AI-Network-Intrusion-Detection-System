@@ -1,0 +1,11 @@
+Scenario,GroundTruth,DetectionLayer,AnalystFacingDetection,EventCount,Result,Severity,MITRETactic,MITRETechniqueID,MITRETechniqueName,Interpretation
+Benign HTTP baseline,BENIGN,Default Suricata,False,34,Informational and decoder records only,Informational,,,,No malicious activity was intentionally generated.
+Benign HTTP baseline,BENIGN,Per-flow supervised ML,False,0,5 BENIGN and 0 ATTACK predictions,Low,,,,Correct benign verdict for all supported flows.
+Benign HTTP baseline,BENIGN,Isolation Forest,False,0,0 anomaly flags,Low,,,,No benign HTTP flow was considered anomalous.
+Benign HTTP baseline,BENIGN,Cross-flow behavioral correlation,False,0,NO_SCAN_PATTERN,Low,,,,The five HTTP flows did not meet the scan rule.
+Rate-limited TCP port scan,PORT SCAN,Default Suricata,False,0,No emitted alert; 3 suppressed,,Reconnaissance,T1595,Active Scanning,"The traffic was processed, but the default configuration produced no analyst-facing alert."
+Rate-limited TCP port scan,PORT SCAN,Lab-tuned Suricata,True,24,Threshold-based TCP SYN scan notifications,Suricata severity 3,Reconnaissance,T1595,Active Scanning,A lab-specific threshold rule detected the aggregate scanning pattern.
+Rate-limited TCP port scan,PORT SCAN,Per-flow supervised ML,False,0,502 BENIGN and 0 ATTACK predictions,Low,Reconnaissance,T1595,Active Scanning,External per-flow generalization failure.
+Rate-limited TCP port scan,PORT SCAN,Attack-family classifier,False,0,Not invoked,,Reconnaissance,T1595,Active Scanning,The binary gate classified every flow as BENIGN.
+Rate-limited TCP port scan,PORT SCAN,Isolation Forest,False,0,0 anomaly flags,Low,Reconnaissance,T1595,Active Scanning,The scan flows remained below the saved anomaly threshold.
+Rate-limited TCP port scan,PORT SCAN,Cross-flow behavioral correlation,True,1,PORT_SCAN,High,Reconnaissance,T1595,Active Scanning,Source-level destination-port correlation detected the aggregate scan.

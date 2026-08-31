@@ -1,0 +1,165 @@
+collection,column,files_present,total_files,present_in_all_files
+generated_flows,ACK Flag Count,8,8,True
+generated_flows,Active Max,8,8,True
+generated_flows,Active Mean,8,8,True
+generated_flows,Active Min,8,8,True
+generated_flows,Active Std,8,8,True
+generated_flows,Average Packet Size,8,8,True
+generated_flows,Avg Bwd Segment Size,8,8,True
+generated_flows,Avg Fwd Segment Size,8,8,True
+generated_flows,Bwd Avg Bulk Rate,8,8,True
+generated_flows,Bwd Avg Bytes/Bulk,8,8,True
+generated_flows,Bwd Avg Packets/Bulk,8,8,True
+generated_flows,Bwd Header Length,8,8,True
+generated_flows,Bwd IAT Max,8,8,True
+generated_flows,Bwd IAT Mean,8,8,True
+generated_flows,Bwd IAT Min,8,8,True
+generated_flows,Bwd IAT Std,8,8,True
+generated_flows,Bwd IAT Total,8,8,True
+generated_flows,Bwd PSH Flags,8,8,True
+generated_flows,Bwd Packet Length Max,8,8,True
+generated_flows,Bwd Packet Length Mean,8,8,True
+generated_flows,Bwd Packet Length Min,8,8,True
+generated_flows,Bwd Packet Length Std,8,8,True
+generated_flows,Bwd Packets/s,8,8,True
+generated_flows,Bwd URG Flags,8,8,True
+generated_flows,CWE Flag Count,8,8,True
+generated_flows,Destination IP,8,8,True
+generated_flows,Destination Port,8,8,True
+generated_flows,Down/Up Ratio,8,8,True
+generated_flows,ECE Flag Count,8,8,True
+generated_flows,FIN Flag Count,8,8,True
+generated_flows,Flow Bytes/s,8,8,True
+generated_flows,Flow Duration,8,8,True
+generated_flows,Flow IAT Max,8,8,True
+generated_flows,Flow IAT Mean,8,8,True
+generated_flows,Flow IAT Min,8,8,True
+generated_flows,Flow IAT Std,8,8,True
+generated_flows,Flow ID,8,8,True
+generated_flows,Flow Packets/s,8,8,True
+generated_flows,Fwd Avg Bulk Rate,8,8,True
+generated_flows,Fwd Avg Bytes/Bulk,8,8,True
+generated_flows,Fwd Avg Packets/Bulk,8,8,True
+generated_flows,Fwd Header Length,8,8,True
+generated_flows,Fwd Header Length.1,8,8,True
+generated_flows,Fwd IAT Max,8,8,True
+generated_flows,Fwd IAT Mean,8,8,True
+generated_flows,Fwd IAT Min,8,8,True
+generated_flows,Fwd IAT Std,8,8,True
+generated_flows,Fwd IAT Total,8,8,True
+generated_flows,Fwd PSH Flags,8,8,True
+generated_flows,Fwd Packet Length Max,8,8,True
+generated_flows,Fwd Packet Length Mean,8,8,True
+generated_flows,Fwd Packet Length Min,8,8,True
+generated_flows,Fwd Packet Length Std,8,8,True
+generated_flows,Fwd Packets/s,8,8,True
+generated_flows,Fwd URG Flags,8,8,True
+generated_flows,Idle Max,8,8,True
+generated_flows,Idle Mean,8,8,True
+generated_flows,Idle Min,8,8,True
+generated_flows,Idle Std,8,8,True
+generated_flows,Init_Win_bytes_backward,8,8,True
+generated_flows,Init_Win_bytes_forward,8,8,True
+generated_flows,Label,8,8,True
+generated_flows,Max Packet Length,8,8,True
+generated_flows,Min Packet Length,8,8,True
+generated_flows,PSH Flag Count,8,8,True
+generated_flows,Packet Length Mean,8,8,True
+generated_flows,Packet Length Std,8,8,True
+generated_flows,Packet Length Variance,8,8,True
+generated_flows,Protocol,8,8,True
+generated_flows,RST Flag Count,8,8,True
+generated_flows,SYN Flag Count,8,8,True
+generated_flows,Source IP,8,8,True
+generated_flows,Source Port,8,8,True
+generated_flows,Subflow Bwd Bytes,8,8,True
+generated_flows,Subflow Bwd Packets,8,8,True
+generated_flows,Subflow Fwd Bytes,8,8,True
+generated_flows,Subflow Fwd Packets,8,8,True
+generated_flows,Timestamp,8,8,True
+generated_flows,Total Backward Packets,8,8,True
+generated_flows,Total Fwd Packets,8,8,True
+generated_flows,Total Length of Bwd Packets,8,8,True
+generated_flows,Total Length of Fwd Packets,8,8,True
+generated_flows,URG Flag Count,8,8,True
+generated_flows,act_data_pkt_fwd,8,8,True
+generated_flows,min_seg_size_forward,8,8,True
+machine_learning,ACK Flag Count,8,8,True
+machine_learning,Active Max,8,8,True
+machine_learning,Active Mean,8,8,True
+machine_learning,Active Min,8,8,True
+machine_learning,Active Std,8,8,True
+machine_learning,Average Packet Size,8,8,True
+machine_learning,Avg Bwd Segment Size,8,8,True
+machine_learning,Avg Fwd Segment Size,8,8,True
+machine_learning,Bwd Avg Bulk Rate,8,8,True
+machine_learning,Bwd Avg Bytes/Bulk,8,8,True
+machine_learning,Bwd Avg Packets/Bulk,8,8,True
+machine_learning,Bwd Header Length,8,8,True
+machine_learning,Bwd IAT Max,8,8,True
+machine_learning,Bwd IAT Mean,8,8,True
+machine_learning,Bwd IAT Min,8,8,True
+machine_learning,Bwd IAT Std,8,8,True
+machine_learning,Bwd IAT Total,8,8,True
+machine_learning,Bwd PSH Flags,8,8,True
+machine_learning,Bwd Packet Length Max,8,8,True
+machine_learning,Bwd Packet Length Mean,8,8,True
+machine_learning,Bwd Packet Length Min,8,8,True
+machine_learning,Bwd Packet Length Std,8,8,True
+machine_learning,Bwd Packets/s,8,8,True
+machine_learning,Bwd URG Flags,8,8,True
+machine_learning,CWE Flag Count,8,8,True
+machine_learning,Destination Port,8,8,True
+machine_learning,Down/Up Ratio,8,8,True
+machine_learning,ECE Flag Count,8,8,True
+machine_learning,FIN Flag Count,8,8,True
+machine_learning,Flow Bytes/s,8,8,True
+machine_learning,Flow Duration,8,8,True
+machine_learning,Flow IAT Max,8,8,True
+machine_learning,Flow IAT Mean,8,8,True
+machine_learning,Flow IAT Min,8,8,True
+machine_learning,Flow IAT Std,8,8,True
+machine_learning,Flow Packets/s,8,8,True
+machine_learning,Fwd Avg Bulk Rate,8,8,True
+machine_learning,Fwd Avg Bytes/Bulk,8,8,True
+machine_learning,Fwd Avg Packets/Bulk,8,8,True
+machine_learning,Fwd Header Length,8,8,True
+machine_learning,Fwd Header Length.1,8,8,True
+machine_learning,Fwd IAT Max,8,8,True
+machine_learning,Fwd IAT Mean,8,8,True
+machine_learning,Fwd IAT Min,8,8,True
+machine_learning,Fwd IAT Std,8,8,True
+machine_learning,Fwd IAT Total,8,8,True
+machine_learning,Fwd PSH Flags,8,8,True
+machine_learning,Fwd Packet Length Max,8,8,True
+machine_learning,Fwd Packet Length Mean,8,8,True
+machine_learning,Fwd Packet Length Min,8,8,True
+machine_learning,Fwd Packet Length Std,8,8,True
+machine_learning,Fwd Packets/s,8,8,True
+machine_learning,Fwd URG Flags,8,8,True
+machine_learning,Idle Max,8,8,True
+machine_learning,Idle Mean,8,8,True
+machine_learning,Idle Min,8,8,True
+machine_learning,Idle Std,8,8,True
+machine_learning,Init_Win_bytes_backward,8,8,True
+machine_learning,Init_Win_bytes_forward,8,8,True
+machine_learning,Label,8,8,True
+machine_learning,Max Packet Length,8,8,True
+machine_learning,Min Packet Length,8,8,True
+machine_learning,PSH Flag Count,8,8,True
+machine_learning,Packet Length Mean,8,8,True
+machine_learning,Packet Length Std,8,8,True
+machine_learning,Packet Length Variance,8,8,True
+machine_learning,RST Flag Count,8,8,True
+machine_learning,SYN Flag Count,8,8,True
+machine_learning,Subflow Bwd Bytes,8,8,True
+machine_learning,Subflow Bwd Packets,8,8,True
+machine_learning,Subflow Fwd Bytes,8,8,True
+machine_learning,Subflow Fwd Packets,8,8,True
+machine_learning,Total Backward Packets,8,8,True
+machine_learning,Total Fwd Packets,8,8,True
+machine_learning,Total Length of Bwd Packets,8,8,True
+machine_learning,Total Length of Fwd Packets,8,8,True
+machine_learning,URG Flag Count,8,8,True
+machine_learning,act_data_pkt_fwd,8,8,True
+machine_learning,min_seg_size_forward,8,8,True

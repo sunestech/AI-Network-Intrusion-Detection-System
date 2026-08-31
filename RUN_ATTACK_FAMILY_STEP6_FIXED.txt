@@ -1,0 +1,59 @@
+AI NIDS — STEP 6 WINDOWS MATPLOTLIB FIX
+
+The previous run completed candidate training and final prediction, but Windows
+aborted while Matplotlib/Tkinter was cleaning up GUI objects. The fixed script
+forces Matplotlib to use the non-interactive Agg backend, which writes PNG files
+without starting Tkinter.
+
+INSTALL
+
+Extract this ZIP into:
+
+    C:\Users\esumi\AI-NIDS-Project
+
+Choose Replace when Windows asks about:
+
+    src\06_train_attack_family_classifier.py
+
+VERIFY
+
+    Select-String `
+        -Path .\src\06_train_attack_family_classifier.py `
+        -Pattern 'matplotlib.use'
+
+Expected text includes:
+
+    matplotlib.use("Agg", force=True)
+
+OPTIONAL SHELL-LEVEL SAFETY CHECK
+
+    $env:MPLBACKEND = "Agg"
+    python -c "import matplotlib; print(matplotlib.get_backend())"
+
+Expected:
+
+    Agg
+
+RERUN
+
+    python .\src\06_train_attack_family_classifier.py
+
+The experiment is deterministic, so it should again select Random Forest under
+the same settings. Leave the terminal open until [COMPLETE] appears.
+
+CORRECT SUMMARY PATH AFTER COMPLETION
+
+    Get-Content .\reports\attack_family_model_summary.txt
+
+Do not type backslashes before underscores. This path is wrong:
+
+    .\reports\attack\_family\_model\_summary.txt
+
+EXPECTED FINAL FILES
+
+    models\attack_family\best_attack_family_pipeline.joblib
+    reports\attack_family_model_summary.txt
+    reports\attack_family_model_summary.json
+    reports\attack_family_final_classification_report.txt
+    reports\figures\attack_family_final_test_confusion_matrix.png
+    reports\figures\attack_family_final_test_confusion_matrix_normalized.png

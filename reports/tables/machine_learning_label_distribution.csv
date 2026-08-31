@@ -1,0 +1,16 @@
+collection,label,count,percentage
+machine_learning,BENIGN,2273097,80.30036637024273
+machine_learning,DoS Hulk,231073,8.162980531966342
+machine_learning,PortScan,158930,5.614427024989553
+machine_learning,DDoS,128027,4.522734843820156
+machine_learning,DoS GoldenEye,10293,0.3636147824087174
+machine_learning,FTP - Patator,7938,0.28042107672791206
+machine_learning,SSH - Patator,5897,0.20831986513788078
+machine_learning,DoS slowloris,5796,0.20475189729339613
+machine_learning,DoS Slowhttptest,5499,0.19425995224575313
+machine_learning,Bot,1966,0.0694517305173942
+machine_learning,Web Attack - Brute Force,1507,0.053236906352855065
+machine_learning,Web Attack - XSS,652,0.023032822124791973
+machine_learning,Infiltration,36,0.0012717509148658145
+machine_learning,Web Attack - SQL Injection,21,0.0007418547003383918
+machine_learning,Heartbleed,11,0.00038859055732010995

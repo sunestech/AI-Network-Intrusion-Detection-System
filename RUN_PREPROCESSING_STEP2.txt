@@ -1,0 +1,68 @@
+AI NIDS — PREPROCESSING CHECKPOINT
+
+This package creates:
+    src\02_preprocess_data.py
+
+The script does NOT modify any raw CSV file.
+
+BEFORE RUNNING
+
+1. Keep the project virtual environment activated.
+2. Confirm there are eight CSV files in each raw-data folder.
+3. Keep at least 2–4 GB of free disk space for the compressed Parquet output.
+
+INSTALL
+
+Extract NIDS_Preprocessing_Step2.zip into:
+
+    C:\Users\esumi\AI-NIDS-Project
+
+Confirm:
+
+    Test-Path .\src\02_preprocess_data.py
+
+Expected:
+
+    True
+
+RUN
+
+    python .\src\02_preprocess_data.py
+
+The process may take several minutes because it reads all 5.66 million physical rows
+across both collections. It uses 50,000-row chunks and does not load everything into RAM.
+
+OUTPUTS
+
+    data\processed\machine_learning\*.parquet
+    data\processed\generated_context\*.parquet
+    data\processed\preprocessing_preview.csv
+
+    reports\preprocessing_summary.txt
+    reports\preprocessing_summary.json
+
+    reports\tables\preprocessing_file_summary.csv
+    reports\tables\feature_manifest.csv
+    reports\tables\preprocessing_alignment_check.csv
+
+CHECK RESULTS
+
+    Get-Content .\reports\preprocessing_summary.txt
+
+    Import-Csv .\reports\tables\preprocessing_alignment_check.csv |
+        Format-Table -AutoSize
+
+    (Get-ChildItem .\data\processed\machine_learning -Filter *.parquet).Count
+
+    (Get-ChildItem .\data\processed\generated_context -Filter *.parquet).Count
+
+Expected Parquet counts:
+
+    8
+    8
+
+IMPORTANT METHODOLOGY
+
+Infinity values are converted to missing values, but missing values are NOT filled
+during preprocessing. The later scikit-learn pipeline will fit a SimpleImputer using
+training data only. This prevents information from the test set leaking into training.

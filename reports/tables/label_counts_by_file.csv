@@ -1,0 +1,45 @@
+collection,file,label,count,percentage_within_file
+machine_learning,Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,BENIGN,97718,43.28689450486168
+machine_learning,Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,DDoS,128027,56.713105495138315
+machine_learning,Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,BENIGN,127537,44.52066032038594
+machine_learning,Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,PortScan,158930,55.47933967961406
+machine_learning,Friday-WorkingHours-Morning.pcap_ISCX.csv,BENIGN,189067,98.9708584380709
+machine_learning,Friday-WorkingHours-Morning.pcap_ISCX.csv,Bot,1966,1.029141561929091
+machine_learning,Monday-WorkingHours.pcap_ISCX.csv,BENIGN,529918,100.0
+machine_learning,Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,BENIGN,288566,99.98752607397037
+machine_learning,Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,Infiltration,36,0.012473926029618644
+machine_learning,Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,BENIGN,168186,98.72040195813719
+machine_learning,Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Web Attack - Brute Force,1507,0.8845661693060822
+machine_learning,Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Web Attack - SQL Injection,21,0.01232640315555921
+machine_learning,Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Web Attack - XSS,652,0.3827054694011716
+machine_learning,Tuesday-WorkingHours.pcap_ISCX.csv,BENIGN,432074,96.89734901067258
+machine_learning,Tuesday-WorkingHours.pcap_ISCX.csv,FTP - Patator,7938,1.7801838491710191
+machine_learning,Tuesday-WorkingHours.pcap_ISCX.csv,SSH - Patator,5897,1.3224671401563997
+machine_learning,Wednesday-workingHours.pcap_ISCX.csv,BENIGN,440031,63.52376126565065
+machine_learning,Wednesday-workingHours.pcap_ISCX.csv,DoS GoldenEye,10293,1.4859182073702581
+machine_learning,Wednesday-workingHours.pcap_ISCX.csv,DoS Hulk,231073,33.358163599695686
+machine_learning,Wednesday-workingHours.pcap_ISCX.csv,DoS Slowhttptest,5499,0.7938467135265763
+machine_learning,Wednesday-workingHours.pcap_ISCX.csv,DoS slowloris,5796,0.8367222316057531
+machine_learning,Wednesday-workingHours.pcap_ISCX.csv,Heartbleed,11,0.001587982151080622
+generated_flows,Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,BENIGN,97718,43.28689450486168
+generated_flows,Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,DDoS,128027,56.713105495138315
+generated_flows,Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,BENIGN,127537,44.52066032038594
+generated_flows,Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,PortScan,158930,55.47933967961406
+generated_flows,Friday-WorkingHours-Morning.pcap_ISCX.csv,BENIGN,189067,98.9708584380709
+generated_flows,Friday-WorkingHours-Morning.pcap_ISCX.csv,Bot,1966,1.029141561929091
+generated_flows,Monday-WorkingHours.pcap_ISCX.csv,BENIGN,529918,100.0
+generated_flows,Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,BENIGN,288566,99.98752607397037
+generated_flows,Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,Infiltration,36,0.012473926029618644
+generated_flows,Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,BENIGN,168186,98.72040195813719
+generated_flows,Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Web Attack - Brute Force,1507,0.8845661693060822
+generated_flows,Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Web Attack - SQL Injection,21,0.01232640315555921
+generated_flows,Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Web Attack - XSS,652,0.3827054694011716
+generated_flows,Tuesday-WorkingHours.pcap_ISCX.csv,BENIGN,432074,96.89734901067258
+generated_flows,Tuesday-WorkingHours.pcap_ISCX.csv,FTP - Patator,7938,1.7801838491710191
+generated_flows,Tuesday-WorkingHours.pcap_ISCX.csv,SSH - Patator,5897,1.3224671401563997
+generated_flows,Wednesday-workingHours.pcap_ISCX.csv,BENIGN,440031,63.52376126565065
+generated_flows,Wednesday-workingHours.pcap_ISCX.csv,DoS GoldenEye,10293,1.4859182073702581
+generated_flows,Wednesday-workingHours.pcap_ISCX.csv,DoS Hulk,231073,33.358163599695686
+generated_flows,Wednesday-workingHours.pcap_ISCX.csv,DoS Slowhttptest,5499,0.7938467135265763
+generated_flows,Wednesday-workingHours.pcap_ISCX.csv,DoS slowloris,5796,0.8367222316057531
+generated_flows,Wednesday-workingHours.pcap_ISCX.csv,Heartbleed,11,0.001587982151080622

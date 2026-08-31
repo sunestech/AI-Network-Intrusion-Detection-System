@@ -1,0 +1,17 @@
+holdout_scenario,attack_family,actual_class,rows,predicted_attack_rows,attack_prediction_rate,detection_rate_if_attack,false_positive_rate_if_benign
+friday-workinghours-afternoon-ddos,BENIGN,BENIGN,97718,269,0.0027528193372766533,,0.0027528193372766533
+friday-workinghours-afternoon-ddos,DDoS,ATTACK,128027,80627,0.6297655963195263,0.6297655963195263,
+friday-workinghours-afternoon-portscan,BENIGN,BENIGN,127537,671,0.0052612183131169775,,0.0052612183131169775
+friday-workinghours-afternoon-portscan,Port Scan,ATTACK,158930,566,0.0035613163027748067,0.0035613163027748067,
+friday-workinghours-morning,BENIGN,BENIGN,189067,103,0.0005447804217552508,,0.0005447804217552508
+friday-workinghours-morning,Bot,ATTACK,1966,0,0.0,0.0,
+monday-workinghours,BENIGN,BENIGN,529918,518,0.0009775097279201687,,0.0009775097279201687
+thursday-workinghours-afternoon-infilteration,BENIGN,BENIGN,288566,33888,0.11743587255601838,,0.11743587255601838
+thursday-workinghours-afternoon-infilteration,Infiltration,ATTACK,36,0,0.0,0.0,
+thursday-workinghours-morning-webattacks,BENIGN,BENIGN,168186,154,0.0009156529080898529,,0.0009156529080898529
+thursday-workinghours-morning-webattacks,Web Attack,ATTACK,2180,1814,0.8321100917431192,0.8321100917431192,
+tuesday-workinghours,BENIGN,BENIGN,432074,1394,0.0032262991987483626,,0.0032262991987483626
+tuesday-workinghours,Brute Force,ATTACK,13835,46,0.003324900614383809,0.003324900614383809,
+wednesday-workinghours,BENIGN,BENIGN,440031,119,0.00027043549204487866,,0.00027043549204487866
+wednesday-workinghours,DoS,ATTACK,252661,3084,0.012206078500441303,0.012206078500441303,
+wednesday-workinghours,Exploit,ATTACK,11,0,0.0,0.0,

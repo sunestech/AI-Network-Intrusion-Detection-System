@@ -1,0 +1,16 @@
+AI-BASED NETWORK INTRUSION DETECTION SYSTEM
+FINAL LIVE-LAB DETECTION COMPARISON
+==============================================================================
+
+Benign Suricata records: 34
+Default port-scan Suricata alerts: 0
+Lab-tuned port-scan Suricata alerts: 24
+ICMP validation records: 4
+
+Benign ML result: 5 BENIGN, 0 ATTACK, 0 anomaly flags
+Port-scan ML result: 502 BENIGN, 0 ATTACK, 0 anomaly flags
+Cross-flow result: PORT_SCAN with 1 alert record(s)
+
+Conclusion: default Suricata and the existing per-flow ML paths did not produce an analyst-facing port-scan detection. The lab-tuned Suricata rule and cross-flow behavioral correlation detected the aggregate scanning pattern.
+
+CSV: C:\Users\esumi\AI-NIDS-Project\reports\tables\final_live_lab_detection_comparison.csv

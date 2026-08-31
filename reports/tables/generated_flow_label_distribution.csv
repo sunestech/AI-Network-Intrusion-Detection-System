@@ -1,0 +1,16 @@
+collection,label,count,percentage
+generated_flows,BENIGN,2273097,80.30036637024273
+generated_flows,DoS Hulk,231073,8.162980531966342
+generated_flows,PortScan,158930,5.614427024989553
+generated_flows,DDoS,128027,4.522734843820156
+generated_flows,DoS GoldenEye,10293,0.3636147824087174
+generated_flows,FTP - Patator,7938,0.28042107672791206
+generated_flows,SSH - Patator,5897,0.20831986513788078
+generated_flows,DoS slowloris,5796,0.20475189729339613
+generated_flows,DoS Slowhttptest,5499,0.19425995224575313
+generated_flows,Bot,1966,0.0694517305173942
+generated_flows,Web Attack - Brute Force,1507,0.053236906352855065
+generated_flows,Web Attack - XSS,652,0.023032822124791973
+generated_flows,Infiltration,36,0.0012717509148658145
+generated_flows,Web Attack - SQL Injection,21,0.0007418547003383918
+generated_flows,Heartbleed,11,0.00038859055732010995

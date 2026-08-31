@@ -1,0 +1,34 @@
+AI-BASED NETWORK INTRUSION DETECTION SYSTEM
+LIVE-LAB CROSS-FLOW CORRELATION SUMMARY
+==============================================================================
+
+Detector type: deterministic source-level behavioral correlation
+Detection condition: >= 20 SYN-bearing flows and >= 20 unique destination ports within 10 seconds
+
+Important:
+  This layer supplements the trained per-flow ML models.
+  It is not a retrained classifier and does not alter saved ML thresholds.
+
+Scenario: benign_baseline
+  Ground truth: BENIGN
+  Source IP: 192.168.244.10
+  Total flows: 5
+  Total unique destination ports: 1
+  Maximum unique ports in one window: 1
+  Maximum SYN-bearing flows in one window: 4
+  Cross-flow scan flag: False
+  Detection: NO_SCAN_PATTERN
+
+Scenario: portscan_rate_limited
+  Ground truth: PORT SCAN
+  Source IP: 192.168.244.10
+  Total flows: 502
+  Total unique destination ports: 502
+  Maximum unique ports in one window: 276
+  Maximum SYN-bearing flows in one window: 276
+  Cross-flow scan flag: True
+  Detection: PORT_SCAN
+
+Alerts emitted: 1
+Summary CSV: C:\Users\esumi\AI-NIDS-Project\reports\tables\live_lab_cross_flow_summary.csv
+Alert CSV: C:\Users\esumi\AI-NIDS-Project\reports\predictions\live_lab\cross_flow_scan_alerts.csv

@@ -1,0 +1,48 @@
+{
+  "model_family_selected": "Random Forest",
+  "operational_families": [
+    "Denial of Service",
+    "Port Scan",
+    "Brute Force",
+    "Web Attack",
+    "Other Malicious"
+  ],
+  "source_attack_rows": 557646,
+  "modeling_rows_after_family_caps": 218028,
+  "maximum_rows_per_family": 100000,
+  "training_rows": 96651,
+  "validation_rows": 48912,
+  "test_rows": 72465,
+  "unique_groups": 3814,
+  "group_overlap_counts": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "group_minutes": 15,
+  "split_random_state": 42,
+  "feature_count": 77,
+  "final_test_metrics": {
+    "model": "Random Forest",
+    "training_rows": 145563,
+    "evaluation_rows": 72465,
+    "fit_seconds": 12.098684200027492,
+    "prediction_seconds": 0.619784599984996,
+    "prediction_throughput_flows_per_second": 116919.6524111026,
+    "accuracy": 0.9995722072724764,
+    "balanced_accuracy": 0.9867577217520249,
+    "macro_precision": 0.9959563900410309,
+    "macro_recall": 0.9867577217520249,
+    "macro_f1": 0.9912474239481979,
+    "macro_f2": 0.9885282835665278,
+    "weighted_f1": 0.9995692416245102,
+    "matthews_correlation": 0.9990805274114632
+  },
+  "experiment_started_utc": "2026-08-07T13:57:00.209431+00:00",
+  "experiment_completed_utc": "2026-08-07T13:58:08.478490+00:00",
+  "limitations": [
+    "The operational families combine several original labels. The model should not be presented as a precise malware or exploit attribution engine.",
+    "Other Malicious combines Bot, Infiltration, and Heartbleed because the last two classes contain extremely few records.",
+    "All data comes from one historical benchmark environment. External traffic validation is still required."
+  ]
+}

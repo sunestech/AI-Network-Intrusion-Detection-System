@@ -1,0 +1,50 @@
+AI-BASED NETWORK INTRUSION DETECTION SYSTEM
+SCENARIO-HOLDOUT GENERALIZATION SUMMARY
+============================================================================
+
+Model family evaluated: HistGradientBoosting
+Predictive features: 77
+Decision threshold: 0.50
+Reusable training pool: 300,000 rows
+Complete scenarios held out: 8
+
+Aggregate performance across all scenario holdouts:
+  Rows evaluated:         2,830,743
+  Accuracy:               0.820321
+  Balanced accuracy:      0.569068
+  Attack precision:       0.698863
+  Attack recall:          0.154465
+  Attack F1-score:        0.253010
+  Attack F2-score:        0.182971
+  Specificity:            0.983672
+  False-positive rate:    0.016328
+  False-negative rate:    0.845535
+  ROC-AUC:                0.912818
+  PR-AUC:                 0.581924
+
+Aggregate confusion matrix:
+  True negatives:  2,235,981
+  False positives: 37,116
+  False negatives: 471,509
+  True positives:  86,137
+
+Interpretation:
+  Each row was predicted by a fresh model that did not train on that
+  row's source traffic scenario. This is a stronger generalization test
+  than the Step 3 random, stratified flow-level baseline.
+
+Important limitations:
+  - All scenarios still come from one historical dataset.
+  - Some scenarios contain no attacks or very few rare attacks.
+  - This evaluation does not replace testing on newer external traffic.
+
+Reports created:
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\scenario_holdout_metrics.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\scenario_holdout_attack_label_detection.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\scenario_holdout_attack_family_detection.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\tables\scenario_holdout_aggregate_metrics.csv
+  C:\Users\esumi\AI-NIDS-Project\reports\figures\scenario_holdout_aggregate_confusion_matrix.png
+  C:\Users\esumi\AI-NIDS-Project\reports\figures\scenario_holdout_error_rates.png
+  C:\Users\esumi\AI-NIDS-Project\reports\figures\scenario_holdout_attack_recall.png
+
+Scenario-holdout evaluation completed successfully.

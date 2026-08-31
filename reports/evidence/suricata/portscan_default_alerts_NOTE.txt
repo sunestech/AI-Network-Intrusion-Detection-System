@@ -1,0 +1,7 @@
+This zero-byte JSON-lines file is intentional.
+
+The default Suricata replay processed the controlled port-scan PCAP
+and reconstructed 502 unique Kali-to-Ubuntu flows across 502 unique
+destination ports. It emitted zero alert events under the default
+ruleset. The corresponding summary is stored in
+portscan_suricata_default_summary.txt.

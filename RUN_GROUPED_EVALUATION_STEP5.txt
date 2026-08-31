@@ -1,0 +1,124 @@
+AI NIDS — STEP 5: GROUP-AWARE KNOWN-ATTACK EVALUATION
+
+This package creates:
+
+    src\05_grouped_session_evaluation.py
+
+WHY THIS STEP IS NEEDED
+
+Step 3:
+    Random, stratified flow split
+    Excellent in-distribution benchmark
+
+Step 4:
+    Complete scenario holdout
+    Harsh zero-shot stress test because holding out a scenario often removes the
+    corresponding attack class from training entirely
+
+Step 5:
+    Group-aware split based on session-like metadata
+    Tests new IP/port/protocol/time groups while allowing known attack families
+    to remain represented
+
+GROUP DEFINITION
+
+    Scenario
+    + Source IP
+    + Destination IP
+    + Destination Port
+    + Protocol
+    + 15-minute timestamp bucket
+
+No GroupID is allowed to appear in more than one of training, validation, or test.
+
+INSTALL
+
+Extract NIDS_Grouped_Evaluation_Step5.zip into:
+
+    C:\Users\esumi\AI-NIDS-Project
+
+Confirm:
+
+    Test-Path .\src\05_grouped_session_evaluation.py
+
+Expected:
+
+    True
+
+RUN
+
+    python .\src\05_grouped_session_evaluation.py
+
+Default:
+    400,000 aligned feature/context rows
+    15-minute group buckets
+    threshold selected on validation data only
+    validation false-positive-rate constraint of 1%
+
+A run may take roughly 10–45 minutes.
+
+LOWER-MEMORY TRIAL
+
+    python .\src\05_grouped_session_evaluation.py `
+        --sample-size 200000 `
+        --group-minutes 15
+
+STRONGER RUN
+
+    python .\src\05_grouped_session_evaluation.py `
+        --sample-size 750000 `
+        --group-minutes 10
+
+OUTPUTS
+
+Summary:
+    reports\grouped_session_evaluation_summary.txt
+    reports\grouped_session_evaluation_summary.json
+
+Tables:
+    reports\tables\grouped_session_split_distribution.csv
+    reports\tables\grouped_session_label_coverage.csv
+    reports\tables\grouped_session_threshold_sweep.csv
+    reports\tables\binary_evaluation_design_comparison.csv
+
+Predictions:
+    reports\predictions\grouped_session_test_predictions.csv
+    reports\predictions\grouped_session_test_predictions.parquet
+
+Figures:
+    reports\figures\grouped_session_test_confusion_matrix.png
+    reports\figures\grouped_session_test_roc_curve.png
+    reports\figures\grouped_session_test_precision_recall_curve.png
+    reports\figures\grouped_session_test_probability_histogram.png
+    reports\figures\binary_evaluation_design_comparison.png
+
+Evaluation artifact:
+    models\binary\grouped_known_attack_nids_pipeline.joblib
+
+CHECK RESULTS
+
+    Get-Content .\reports\grouped_session_evaluation_summary.txt
+
+    Import-Csv .\reports\tables\grouped_session_label_coverage.csv |
+        Format-Table `
+            Label,
+            train,
+            validation,
+            test,
+            seen_in_training,
+            represented_in_all_splits `
+            -AutoSize
+
+    Import-Csv .\reports\tables\binary_evaluation_design_comparison.csv |
+        Format-Table -AutoSize
+
+    Start-Process .\reports\figures\grouped_session_test_confusion_matrix.png
+
+    Start-Process .\reports\figures\binary_evaluation_design_comparison.png
+
+IMPORTANT
+
+The Step 4 result is not discarded. It remains the novel-attack/out-of-distribution
+stress test. Step 5 answers a different question: can the detector recognize known
+attack families in new session-like groups without putting the same group on both
+sides of the split?

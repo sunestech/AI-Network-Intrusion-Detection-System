@@ -1,0 +1,111 @@
+AI NIDS — STEP 8: STREAMLIT SOC DASHBOARD
+
+This package creates:
+
+    dashboard.py
+    src\dashboard_inference.py
+    src\08_create_dashboard_demo.py
+    src\08_batch_predict.py
+    config\mitre_attack_mapping.json
+    .streamlit\config.toml
+    README_DASHBOARD.md
+
+PURPOSE
+
+The dashboard combines the three completed model components:
+
+1. Group-aware binary detector
+   BENIGN versus ATTACK
+
+2. Second-stage family classifier
+   Denial of Service
+   Port Scan
+   Brute Force
+   Web Attack
+   Other Malicious
+
+3. Benign-trained Isolation Forest
+   Within benign profile versus anomalous
+
+The displayed severity is an analyst-triage heuristic:
+
+    Critical = supervised ATTACK + anomaly
+    High     = supervised ATTACK only
+    Medium   = anomaly only
+    Low      = neither
+
+This fusion has not been independently benchmarked as a fourth model. The
+dashboard preserves the separate validated metrics for each component.
+
+INPUT REQUIREMENT
+
+The dashboard accepts CSV flow records containing the same 77 CICIDS/CICFlowMeter
+features used during training. It does NOT convert raw packets or PCAP files into
+those features.
+
+INSTALL
+
+Extract NIDS_Streamlit_SOC_Dashboard_Step8.zip into:
+
+    C:\Users\esumi\AI-NIDS-Project
+
+Confirm:
+
+    Test-Path .\dashboard.py
+    Test-Path .\src\dashboard_inference.py
+    Test-Path .\config\mitre_attack_mapping.json
+
+All three should return True.
+
+CREATE A SAFE DEMONSTRATION CSV
+
+    python .\src\08_create_dashboard_demo.py
+
+Expected output:
+
+    data\dashboard_demo.csv
+
+The default creates approximately 2,000 aligned rows, including all 77 features,
+actual labels, Flow ID, IP addresses, ports, protocol, and timestamp.
+
+START THE DASHBOARD
+
+    streamlit run .\dashboard.py
+
+Streamlit will display a local address such as:
+
+    http://localhost:8501
+
+Open it in the browser.
+
+DASHBOARD WORKFLOW
+
+1. Select "Use local demo CSV".
+2. Click "Run hybrid NIDS analysis".
+3. Review:
+   - known-attack probability;
+   - predicted attack family;
+   - anomaly score and threshold;
+   - severity queue;
+   - IP/port context;
+   - MITRE ATT&CK enrichment;
+   - model-evidence comparison.
+4. Download the complete prediction ledger.
+
+BATCH ANALYSIS FOR LARGER FILES
+
+    python .\src\08_batch_predict.py `
+        --input .\data\dashboard_demo.csv `
+        --output .\reports\predictions\dashboard_batch_predictions.csv
+
+The batch command processes 50,000 rows at a time by default.
+
+IMPORTANT LIMITATIONS
+
+- An anomaly is not proof of malicious activity.
+- Family-level MITRE mapping is enrichment, not exact attribution.
+- The dashboard severity rule is an operational triage heuristic.
+- The model expects flow features, not raw network packets.
+- A production deployment still requires a live flow extractor that recreates
+  the exact 77-feature schema, schema monitoring, secure access, durable logs,
+  analyst feedback, alert suppression, and external validation.

@@ -1,0 +1,45 @@
+AI NIDS — DATASET AUDIT CHECKPOINT
+
+The ZIP is safe to extract into:
+C:\Users\esumi\AI-NIDS-Project
+
+It creates:
+src\01_dataset_audit.py
+
+It does not contain or overwrite any source CSV files.
+
+RUN STEPS
+
+1. Extract the ZIP into the AI-NIDS-Project root.
+
+2. Confirm:
+   Test-Path .\src\01_dataset_audit.py
+
+   Expected:
+   True
+
+3. Keep the virtual environment activated and run:
+   python .\src\01_dataset_audit.py
+
+4. The script scans both of these locations recursively:
+   data\raw\machine_learning
+   data\raw\generated_flows
+
+   Therefore, your generated CSVs may remain directly inside generated_flows.
+   You do not need to create or use a generated_flows\csv subfolder.
+
+5. When the audit finishes, inspect:
+
+   Get-Content .\reports\dataset_audit_summary.txt
+
+   Import-Csv .\reports\tables\dataset_inventory.csv |
+       Format-Table -AutoSize
+
+   Import-Csv .\reports\tables\machine_learning_label_distribution.csv |
+       Format-Table -AutoSize
+
+   Start-Process .\reports\figures\multiclass_label_distribution.png
+
+   Start-Process .\reports\figures\binary_label_distribution.png
+
+The audit reads large files in 50,000-row chunks and does not modify the raw data.

@@ -1,0 +1,78 @@
+position,feature,raw_column,transform
+1,Destination Port,dst_port,numeric_identity
+2,Flow Duration,flow_duration,seconds_to_microseconds
+3,Total Fwd Packets,tot_fwd_pkts,numeric_identity
+4,Total Backward Packets,tot_bwd_pkts,numeric_identity
+5,Total Length of Fwd Packets,totlen_fwd_pkts,numeric_identity
+6,Total Length of Bwd Packets,totlen_bwd_pkts,numeric_identity
+7,Fwd Packet Length Max,fwd_pkt_len_max,numeric_identity
+8,Fwd Packet Length Min,fwd_pkt_len_min,numeric_identity
+9,Fwd Packet Length Mean,fwd_pkt_len_mean,numeric_identity
+10,Fwd Packet Length Std,fwd_pkt_len_std,numeric_identity
+11,Bwd Packet Length Max,bwd_pkt_len_max,numeric_identity
+12,Bwd Packet Length Min,bwd_pkt_len_min,numeric_identity
+13,Bwd Packet Length Mean,bwd_pkt_len_mean,numeric_identity
+14,Bwd Packet Length Std,bwd_pkt_len_std,numeric_identity
+15,Flow Bytes/s,flow_byts_s,numeric_identity
+16,Flow Packets/s,flow_pkts_s,numeric_identity
+17,Flow IAT Mean,flow_iat_mean,seconds_to_microseconds
+18,Flow IAT Std,flow_iat_std,seconds_to_microseconds
+19,Flow IAT Max,flow_iat_max,seconds_to_microseconds
+20,Flow IAT Min,flow_iat_min,seconds_to_microseconds
+21,Fwd IAT Total,fwd_iat_tot,seconds_to_microseconds
+22,Fwd IAT Mean,fwd_iat_mean,seconds_to_microseconds
+23,Fwd IAT Std,fwd_iat_std,seconds_to_microseconds
+24,Fwd IAT Max,fwd_iat_max,seconds_to_microseconds
+25,Fwd IAT Min,fwd_iat_min,seconds_to_microseconds
+26,Bwd IAT Total,bwd_iat_tot,seconds_to_microseconds
+27,Bwd IAT Mean,bwd_iat_mean,seconds_to_microseconds
+28,Bwd IAT Std,bwd_iat_std,seconds_to_microseconds
+29,Bwd IAT Max,bwd_iat_max,seconds_to_microseconds
+30,Bwd IAT Min,bwd_iat_min,seconds_to_microseconds
+31,Fwd PSH Flags,fwd_psh_flags,numeric_identity
+32,Bwd PSH Flags,bwd_psh_flags,numeric_identity
+33,Fwd URG Flags,fwd_urg_flags,numeric_identity
+34,Bwd URG Flags,bwd_urg_flags,numeric_identity
+35,Fwd Header Length,fwd_header_len,numeric_identity
+36,Bwd Header Length,bwd_header_len,numeric_identity
+37,Fwd Packets/s,fwd_pkts_s,numeric_identity
+38,Bwd Packets/s,bwd_pkts_s,numeric_identity
+39,Min Packet Length,pkt_len_min,numeric_identity
+40,Max Packet Length,pkt_len_max,numeric_identity
+41,Packet Length Mean,pkt_len_mean,numeric_identity
+42,Packet Length Std,pkt_len_std,numeric_identity
+43,Packet Length Variance,pkt_len_var,numeric_identity
+44,FIN Flag Count,fin_flag_cnt,numeric_identity
+45,SYN Flag Count,syn_flag_cnt,numeric_identity
+46,RST Flag Count,rst_flag_cnt,numeric_identity
+47,PSH Flag Count,psh_flag_cnt,numeric_identity
+48,ACK Flag Count,ack_flag_cnt,numeric_identity
+49,URG Flag Count,urg_flag_cnt,numeric_identity
+50,CWE Flag Count,cwr_flag_count,numeric_identity
+51,ECE Flag Count,ece_flag_cnt,numeric_identity
+52,Down/Up Ratio,down_up_ratio,numeric_identity
+53,Average Packet Size,pkt_size_avg,numeric_identity
+54,Avg Fwd Segment Size,fwd_seg_size_avg,numeric_identity
+55,Avg Bwd Segment Size,bwd_seg_size_avg,numeric_identity
+56,Fwd Avg Bytes/Bulk,fwd_byts_b_avg,numeric_identity
+57,Fwd Avg Packets/Bulk,fwd_pkts_b_avg,numeric_identity
+58,Fwd Avg Bulk Rate,fwd_blk_rate_avg,numeric_identity
+59,Bwd Avg Bytes/Bulk,bwd_byts_b_avg,numeric_identity
+60,Bwd Avg Packets/Bulk,bwd_pkts_b_avg,numeric_identity
+61,Bwd Avg Bulk Rate,bwd_blk_rate_avg,numeric_identity
+62,Subflow Fwd Packets,subflow_fwd_pkts,numeric_identity
+63,Subflow Fwd Bytes,subflow_fwd_byts,numeric_identity
+64,Subflow Bwd Packets,subflow_bwd_pkts,numeric_identity
+65,Subflow Bwd Bytes,subflow_bwd_byts,numeric_identity
+66,Init_Win_bytes_forward,init_fwd_win_byts,numeric_identity
+67,Init_Win_bytes_backward,init_bwd_win_byts,numeric_identity
+68,act_data_pkt_fwd,fwd_act_data_pkts,numeric_identity
+69,min_seg_size_forward,fwd_seg_size_min,numeric_identity
+70,Active Mean,active_mean,seconds_to_microseconds
+71,Active Std,active_std,seconds_to_microseconds
+72,Active Max,active_max,seconds_to_microseconds
+73,Active Min,active_min,seconds_to_microseconds
+74,Idle Mean,idle_mean,seconds_to_microseconds
+75,Idle Std,idle_std,seconds_to_microseconds
+76,Idle Max,idle_max,seconds_to_microseconds
+77,Idle Min,idle_min,seconds_to_microseconds

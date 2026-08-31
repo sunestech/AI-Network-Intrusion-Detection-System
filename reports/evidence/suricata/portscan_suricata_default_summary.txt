@@ -1,0 +1,12 @@
+Scenario: Controlled rate-limited TCP port scan
+Ground truth: PORT SCAN
+Source: 192.168.244.10
+Destination: 192.168.244.20
+Suricata ruleset mode: Default loaded rules
+Suricata alert count: 0
+Suricata unique flow records: 502
+Kali-to-Ubuntu flow records: 502
+Unique TCP destination ports observed: 502
+SYN packets in PCAP: 502
+Interpretation: Suricata processed the scan but no loaded signature matched.
+Recorded UTC: 2026-08-14T17:33:04+00:00

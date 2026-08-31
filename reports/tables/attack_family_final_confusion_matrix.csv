@@ -1,0 +1,6 @@
+,Predicted Denial of Service,Predicted Port Scan,Predicted Brute Force,Predicted Web Attack,Predicted Other Malicious
+Actual Denial of Service,48981,1,0,1,0
+Actual Port Scan,12,19985,0,3,0
+Actual Brute Force,0,0,2866,0,0
+Actual Web Attack,13,1,0,200,0
+Actual Other Malicious,0,0,0,0,402

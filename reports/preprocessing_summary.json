@@ -1,0 +1,32 @@
+{
+  "project_root": "C:\\Users\\esumi\\AI-NIDS-Project",
+  "machine_learning_files_processed": 8,
+  "generated_flow_files_processed": 8,
+  "machine_learning_valid_rows": 2830743,
+  "generated_context_valid_rows": 2830743,
+  "generated_empty_rows_dropped": 288602,
+  "feature_count_after_duplicate_removal": 77,
+  "duplicate_feature_columns_removed": [
+    "Fwd Header Length.1"
+  ],
+  "infinity_values_replaced_with_nan": 4376,
+  "non_numeric_feature_values_coerced_to_nan": 0,
+  "missing_feature_values_preserved_for_train_only_imputation": 5734,
+  "all_collection_pairs_have_matching_rows_and_alignment_hashes": true,
+  "targets_created": {
+    "Label": "normalized original multiclass label",
+    "BinaryLabel": "0=BENIGN, 1=ATTACK",
+    "AttackFamily": [
+      "BENIGN",
+      "Bot",
+      "Brute Force",
+      "DDoS",
+      "DoS",
+      "Exploit",
+      "Infiltration",
+      "Port Scan",
+      "Web Attack"
+    ]
+  },
+  "important_methodology_note": "Missing values were not globally imputed. A SimpleImputer will be fit only on training data inside the later scikit-learn pipeline to avoid test-data leakage."
+}

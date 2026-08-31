@@ -1,0 +1,53 @@
+﻿# AI-NIDS GitHub publish safeguards
+
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors and operating-system files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Raw, large, or reproducible datasets
+data/raw/
+data/processed/
+data/live_lab/raw/
+*.pcap
+*.pcapng
+*.parquet
+
+# Large generated prediction outputs; retain the small live-lab ledgers
+reports/predictions/*
+!reports/predictions/live_lab/
+!reports/predictions/live_lab/benign_prediction_ledger.csv
+!reports/predictions/live_lab/portscan_prediction_ledger.csv
+!reports/predictions/live_lab/cross_flow_scan_alerts.csv
+
+# Generated archives, logs, and temporary files
+*.log
+*.tmp
+*.zip
+*.tar
+*.tar.gz
+~$*

@@ -1,0 +1,165 @@
+AI NIDS — STEP 6: SECOND-STAGE ATTACK-FAMILY CLASSIFIER
+
+This package creates:
+
+    src\06_train_attack_family_classifier.py
+
+WHY THIS STEP EXISTS
+
+The completed binary detector answers:
+
+    Is this flow BENIGN or ATTACK?
+
+The Step 6 model answers:
+
+    When it is an ATTACK, what broad family does it resemble?
+
+The two models form a hierarchy:
+
+    Network flow
+        ↓
+    Binary detector
+        ├── BENIGN
+        └── ATTACK
+              ↓
+          Family classifier
+
+OPERATIONAL FAMILIES
+
+1. Denial of Service
+   - DDoS
+   - DoS Hulk
+   - DoS GoldenEye
+   - DoS Slowhttptest
+   - DoS slowloris
+
+2. Port Scan
+   - PortScan
+
+3. Brute Force
+   - FTP-Patator
+   - SSH-Patator
+
+4. Web Attack
+   - Web Attack - Brute Force
+   - Web Attack - XSS
+   - Web Attack - SQL Injection
+
+5. Other Malicious
+   - Bot
+   - Infiltration
+   - Heartbleed
+
+The rare Infiltration and Heartbleed labels are not treated as statistically
+reliable standalone classes.
+
+METHODOLOGY
+
+- Uses only labeled ATTACK records.
+- Uses aligned generated-flow context to create session-like GroupIDs.
+- Prevents the same GroupID from appearing in more than one split.
+- Retains every small-family row.
+- Caps dominant families at 100,000 rows by default.
+- Creates no synthetic flows.
+- Compares:
+  Dummy Prior
+  Logistic Regression (SGD)
+  Random Forest
+  HistGradientBoosting
+- Selects by validation macro F2 score.
+- Refits on training + validation.
+- Evaluates once on an untouched grouped test split.
+
+INSTALL
+
+Extract NIDS_Attack_Family_Step6.zip into:
+
+    C:\Users\esumi\AI-NIDS-Project
+
+Confirm:
+
+    Test-Path .\src\06_train_attack_family_classifier.py
+
+Expected:
+
+    True
+
+RUN
+
+    python .\src\06_train_attack_family_classifier.py
+
+The default run keeps at most 100,000 rows per operational family. It normally
+creates a modeling set of roughly 218,000 attack flows.
+
+Allow approximately 10–45 minutes depending on the computer.
+
+FASTER TRIAL
+
+    python .\src\06_train_attack_family_classifier.py `
+        --max-per-family 50000 `
+        --rf-trees 100 `
+        --hgb-iterations 90 `
+        --n-jobs 2
+
+STRONGER RUN
+
+    python .\src\06_train_attack_family_classifier.py `
+        --max-per-family 140000 `
+        --rf-trees 220 `
+        --hgb-iterations 180 `
+        --n-jobs 4
+
+OUTPUTS
+
+Saved model:
+    models\attack_family\best_attack_family_pipeline.joblib
+
+Main reports:
+    reports\attack_family_model_summary.txt
+    reports\attack_family_model_summary.json
+    reports\attack_family_final_classification_report.txt
+
+Tables:
+    reports\tables\attack_family_original_distribution.csv
+    reports\tables\attack_family_split_distribution.csv
+    reports\tables\attack_family_validation_model_comparison.csv
+    reports\tables\attack_family_final_classification_report.csv
+    reports\tables\attack_family_final_confusion_matrix.csv
+
+Predictions:
+    reports\predictions\attack_family_test_predictions.csv
+    reports\predictions\attack_family_test_predictions.parquet
+
+Figures:
+    reports\figures\attack_family_modeling_distribution.png
+    reports\figures\attack_family_validation_model_comparison.png
+    reports\figures\attack_family_validation_confusion_*.png
+    reports\figures\attack_family_final_test_confusion_matrix.png
+    reports\figures\attack_family_final_test_confusion_matrix_normalized.png
+
+CHECK RESULTS
+
+    Get-Content .\reports\attack_family_model_summary.txt
+
+    Import-Csv .\reports\tables\attack_family_validation_model_comparison.csv |
+        Format-Table `
+            model,
+            macro_precision,
+            macro_recall,
+            macro_f2,
+            balanced_accuracy,
+            fit_seconds `
+            -AutoSize
+
+    Get-Content .\reports\attack_family_final_classification_report.txt
+
+    Start-Process .\reports\figures\attack_family_final_test_confusion_matrix.png
+
+    Start-Process .\reports\figures\attack_family_final_test_confusion_matrix_normalized.png
+
+IMPORTANT
+
+The family classifier is not an anomaly detector. A later step will add a
+benign-trained anomaly component for possible novel traffic patterns. The final
+Streamlit dashboard will combine binary risk, attack family, flow metadata, and
+anomaly status.

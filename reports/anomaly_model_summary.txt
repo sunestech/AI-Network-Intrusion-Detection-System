@@ -1,0 +1,44 @@
+AI-BASED NETWORK INTRUSION DETECTION SYSTEM
+BENIGN-TRAINED ANOMALY DETECTOR SUMMARY
+==============================================================================
+
+Model: Isolation Forest
+Predictive features: 77
+Reusable benign pool: 240,000
+Target calibration FPR: 1.0000%
+
+Aggregate complete-scenario holdout performance:
+  Rows evaluated:        2,830,743
+  Accuracy:              0.861847
+  Balanced accuracy:     0.671503
+  Attack precision:      0.858919
+  Attack recall:         0.357408
+  Attack F1-score:       0.504773
+  Attack F2-score:       0.404663
+  Specificity:           0.985598
+  False-positive rate:   0.014402
+  False-negative rate:   0.642592
+  ROC-AUC:               0.777064
+  PR-AUC:                0.547881
+
+Aggregate confusion matrix:
+  True negatives:  2,240,360
+  False positives: 32,737
+  False negatives: 358,339
+  True positives:  199,307
+
+Final dashboard artifact:
+  Model path: C:\Users\esumi\AI-NIDS-Project\models\anomaly\benign_isolation_forest_pipeline.joblib
+  Threshold: 0.524440
+  Calibration FPR: 1.0020%
+
+Interpretation:
+  This detector flags flows that differ from its learned benign
+  profile. It is intended to complement the supervised binary and
+  attack-family classifiers, especially for possible novel patterns.
+
+Warning:
+  An anomaly is not proof of an intrusion. Benign operational changes
+  can also generate anomaly alerts.
+
+Anomaly evaluation completed successfully.
